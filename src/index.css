@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #0049ac;
+    --color-secondary: #ff7226;
+  }
+}
+
+body {
+  font-family: Poppins, sans-serif;
+}
