@@ -258,7 +258,7 @@ export default function Home() {
           <h2 className="text-3xl font-semibold text-center mb-10">
             Our successful projects
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-20">
             {projects.slice(0, 4).map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}

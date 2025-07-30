@@ -11,7 +11,7 @@ interface Props {
 
 export default function ProjectCard({ project }: Props) {
   return (
-    <div className="overflow-hidden lg:p-10">
+    <div className="overflow-hidden">
       <CustomImg src={project.image} alt={project.title} />
       <div className="py-4">
         <h2 className="text-xl lg:text-3xl font-semibold">{project.title}</h2>

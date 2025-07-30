@@ -11,7 +11,7 @@ export default function ProjectsPage() {
         <h1 className="text-4xl lg:text-6xl font-semibold text-center mb-10">
           All Projects
         </h1>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-20">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
