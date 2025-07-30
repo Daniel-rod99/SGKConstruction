@@ -8,6 +8,7 @@ import CustomAccordion from "../components/CustomAccordion";
 import WorkspacePremiumOutlinedIcon from "@mui/icons-material/WorkspacePremiumOutlined";
 import CurrencyExchangeOutlinedIcon from "@mui/icons-material/CurrencyExchangeOutlined";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
+import TestimonialCarousel from "../components/TestimonialCarousel";
 
 export default function Home() {
   return (
@@ -265,6 +266,9 @@ export default function Home() {
           </div>
         </section>
       </div>
+
+      {/* SECTION TESTIMONIALS*/}
+      <TestimonialCarousel />
     </>
   );
 }
