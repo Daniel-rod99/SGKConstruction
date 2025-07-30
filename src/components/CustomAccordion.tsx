@@ -11,6 +11,8 @@ interface AccordionItem {
   content: React.ReactNode;
   buttonLabel?: React.ReactNode;
   buttonHref?: string;
+  color?: string;
+  showDivider?: boolean;
 }
 
 interface CustomAccordionProps {
@@ -32,22 +34,36 @@ export default function CustomAccordion({ items }: CustomAccordionProps) {
             sx={{ backgroundColor: "transparent", boxShadow: "none" }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+              expandIcon={
+                <ExpandMoreIcon sx={{ color: item.color ?? "white" }} />
+              }
               aria-controls={`panel${index}-content`}
               id={`panel${index}-header`}
             >
-              <div style={{ color: "white" }}>{item.title}</div>
+              <div style={{ color: item.color ?? "white" }}>{item.title}</div>
             </AccordionSummary>
             <AccordionDetails>
-              <div style={{ color: "white" }}>{item.content}</div>
+              <div style={{ color: item.color ?? "white" }}>{item.content}</div>
               {item.buttonLabel && item.buttonHref && (
-                <Button href={item.buttonHref} sx={{ mt: 2, color: "white" }}>
+                <Button
+                  href={item.buttonHref}
+                  sx={{ mt: 2, color: item.color ?? "white" }}
+                >
                   {item.buttonLabel}
                 </Button>
               )}
             </AccordionDetails>
           </Accordion>
-          <Divider sx={{ borderColor: "rgba(255, 255, 255, 0.2)", my: 1 }} />
+          {item.showDivider !== false && (
+            <Divider
+              sx={{
+                borderColor: item.color
+                  ? `${item.color}33`
+                  : "rgba(255, 255, 255, 0.2)",
+                my: 1,
+              }}
+            />
+          )}
         </div>
       ))}
     </div>

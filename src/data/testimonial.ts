@@ -20,4 +20,10 @@ export const testimonials: Testimonial[] = [
     comment: "Cumplieron todo lo prometido y más. 100% recomendados.",
     position: "Propietaria de local",
   },
+  {
+    id: 4,
+    name: "Daniel Ramírez",
+    comment: "lorem ahishuia ahsiuhiha aoiuhdioauhd uasuihd haui huash",
+    position: "Propietaria de local",
+  },
 ];

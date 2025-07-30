@@ -35,7 +35,7 @@ export default function TestimonialCarousel() {
         </h2>
 
         <div className="relative md:px-12">
-          {/* Carrusel */}
+          {/* CAROUSEL */}
           <div ref={sliderRef} className="keen-slider">
             {testimonials.map((t) => (
               <div
@@ -51,7 +51,7 @@ export default function TestimonialCarousel() {
             ))}
           </div>
 
-          {/* Flecha izquierda */}
+          {/* ROW LEFT */}
           <button
             onClick={() => instanceRef.current?.prev()}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-gray-800 shadow-md rounded-full p-2 hover:bg-gray-100 transition hidden md:block"
@@ -60,7 +60,7 @@ export default function TestimonialCarousel() {
             <ArrowBackIosNewOutlinedIcon fontSize="small" />
           </button>
 
-          {/* Flecha derecha */}
+          {/* ROW RIGHT */}
           <button
             onClick={() => instanceRef.current?.next()}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-gray-800 shadow-md rounded-full p-2 hover:bg-gray-100 transition hidden md:block"
@@ -70,7 +70,7 @@ export default function TestimonialCarousel() {
           </button>
         </div>
 
-        {/* Pagination dots - visibles solo en móvil */}
+        {/* PAGINATION DOTS*/}
         <div className="flex justify-center gap-2 mt-6">
           {testimonials.map((_, idx) => (
             <button

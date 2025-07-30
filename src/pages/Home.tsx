@@ -9,6 +9,8 @@ import WorkspacePremiumOutlinedIcon from "@mui/icons-material/WorkspacePremiumOu
 import CurrencyExchangeOutlinedIcon from "@mui/icons-material/CurrencyExchangeOutlined";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 import TestimonialCarousel from "../components/TestimonialCarousel";
+import ContactForm from "../components/ContactForm";
+import QuickLinks from "../components/QuickLinks";
 
 export default function Home() {
   return (
@@ -269,6 +271,93 @@ export default function Home() {
 
       {/* SECTION TESTIMONIALS*/}
       <TestimonialCarousel />
+
+      {/* SECTION QUESTIONS*/}
+      <div className="max-w-[1600px] mx-auto py-10 px-5 md:px-10">
+        <div className="md:grid md:grid-cols-2 md:grid-rows-1 md:gap-4">
+          <div>
+            <h1 className="text-2xl md:text-4xl lg:text-6xl font-semibold pb-5">
+              Frequently asked questions
+            </h1>
+          </div>
+          <div className="lg:text-xl">
+            <CustomAccordion
+              items={[
+                {
+                  title: (
+                    <h2 className="font-medium lg:pb-5">
+                      What’s included with the in-person ticket?
+                    </h2>
+                  ),
+                  content: (
+                    <p className="text-[16px]">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                      dapibus leo.
+                    </p>
+                  ),
+                  color: "black",
+                  showDivider: false,
+                },
+                {
+                  title: (
+                    <h2 className="font-medium lg:pb-5">
+                      What’s included with the livestream ticket?
+                    </h2>
+                  ),
+                  content: (
+                    <p className="text-[16px]">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                      dapibus leo.
+                    </p>
+                  ),
+                  color: "black",
+                  showDivider: false,
+                },
+                {
+                  title: (
+                    <h2 className="font-medium lg:pb-5">
+                      Who will we hear from during the daily discussions?
+                    </h2>
+                  ),
+                  content: (
+                    <p className="text-[16px]">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                      dapibus leo.
+                    </p>
+                  ),
+                  color: "black",
+                  showDivider: false,
+                },
+                {
+                  title: (
+                    <h2 className="font-medium lg:pb-5">
+                      How are you handling COVID?
+                    </h2>
+                  ),
+                  content: (
+                    <p className="text-[16px]">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                      dapibus leo.
+                    </p>
+                  ),
+                  color: "black",
+                  showDivider: false,
+                },
+              ]}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* SECTION CONTACT*/}
+      <div>
+        <ContactForm />
+        <QuickLinks />
+      </div>
     </>
   );
 }
