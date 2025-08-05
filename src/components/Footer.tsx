@@ -1,6 +1,6 @@
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 
-export default function QuickLinks() {
+export default function Footer() {
   return (
     <section
       className="bg-[var(--color-primary)] text-white"
@@ -119,7 +119,7 @@ export default function QuickLinks() {
           </div>
         </div>
 
-        <div className="border-t border-gray-500 border-opacity-30 mt-12 pt-6 text-center text-sm">
+        <div className="border-t border-gray-500 border-opacity-30 mt-12 pt-6 text-center text-sm text-[12px]">
           ©Copyright 2025 SGK Construction. All rights reserved.
         </div>
       </div>

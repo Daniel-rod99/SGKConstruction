@@ -8,7 +8,11 @@ interface FormData {
   message: string;
 }
 
-export default function ContactForm() {
+interface ContactFormProps {
+  showImage?: boolean;
+}
+
+export default function ContactForm({ showImage = true }: ContactFormProps) {
   const [form, setForm] = useState<FormData>({
     fullName: "",
     email: "",
@@ -19,9 +23,8 @@ export default function ContactForm() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const validateEmail = (email: string) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
+  const validateEmail = (email: string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -78,16 +81,26 @@ export default function ContactForm() {
 
   return (
     <section className="py-10 md:py-20">
-      <div className="max-w-[1600px] mx-auto px-5 md:px-10">
+      <div
+        className={`max-w-[1600px] mx-auto px-5 ${
+          showImage ? "md:px-10" : "md:px-62"
+        }`}
+      >
         <h2 className="text-2xl md:text-4xl font-semibold mb-10 text-center">
           Let's talk about your project!
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-10">
-          <div
-            className="bg-cover bg-center h-[300px] md:h-auto"
-            style={{ backgroundImage: "url('/tower.webp')" }}
-          />
+        <div
+          className={`grid  gap-10 ${
+            showImage ? "md:grid-cols-2" : "md:grid-cols-1"
+          }`}
+        >
+          {showImage && (
+            <div
+              className="bg-cover bg-center h-[300px] md:h-auto"
+              style={{ backgroundImage: "url('/tower.webp')" }}
+            />
+          )}
 
           <form
             onSubmit={handleSubmit}

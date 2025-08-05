@@ -10,14 +10,14 @@ import CurrencyExchangeOutlinedIcon from "@mui/icons-material/CurrencyExchangeOu
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import ContactForm from "../components/ContactForm";
-import QuickLinks from "../components/QuickLinks";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
     <>
-      <Header />
+      <Header isHome />
 
-      {/* CONTAINER DIV */}
+      {/* CONTAINER HERO DIV */}
       <div className="md:px-4 mx-auto max-w-[1600px]">
         {/* HERO SECTION */}
         <div className="flex flex-col gap-4 py-10 px-5 md:px-10 md:py-20 md:flex-row">
@@ -356,7 +356,7 @@ export default function Home() {
       {/* SECTION CONTACT*/}
       <div>
         <ContactForm />
-        <QuickLinks />
+        <Footer />
       </div>
     </>
   );
