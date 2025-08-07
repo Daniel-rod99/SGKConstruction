@@ -14,8 +14,8 @@ export default function Contact() {
               Contact us
             </h1>
             <p className="text-white lg:text-xl pb-5 row-start-2 pt-10 md:pt-0 lg:pt-10">
-              ConstructionPlus’s legacy of successfully completed projects is
-              the best demonstration of our capabilities. We have a diverse
+              SGKConstruction’s legacy of successfully completed projects is the
+              best demonstration of our capabilities. We have a diverse
               portfolio which showcases our deep expertise and experience.
             </p>
           </div>

@@ -83,7 +83,7 @@ export default function ContactForm({ showImage = true }: ContactFormProps) {
     <section className="py-10 md:py-20">
       <div
         className={`max-w-[1600px] mx-auto px-5 ${
-          showImage ? "md:px-10" : "md:px-62"
+          showImage ? "md:px-10" : "lg:px-62"
         }`}
       >
         <h2 className="text-2xl md:text-4xl font-semibold mb-10 text-center">

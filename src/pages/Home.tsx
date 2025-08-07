@@ -167,20 +167,19 @@ export default function Home() {
               We are your partner in building legacy
             </h1>
             <p className="pb-5">
-              Lorem ipsum dolor sit amet consectetur. Eros nulla sit
-              pellentesque mostie odio amet consectetur maecenas. Et cursus
-              sapien at nisl mattis est phasellus. Sit sagittis donec nullam
-              nunc volutpat suscipit pulvinar. Morbi ultrices gravida elementum
-              eget.
+              SGK Construction is a company proudly serving the Los Angeles area
+              since 1988. With over 35 years of experience, we specialize in new
+              construction, remodeling, plumbing, electrical, concrete, and
+              general repairs. Our team is licensed, insured, and dedicated to
+              delivering top-quality work with honesty, reliability, and
+              precision.
             </p>
             <p className="pb-5">
-              Et cursus sapien at nisl mattis est phasellus. Sit sagittis donec
-              nullam nunc volutpat suscipit pulvinar. Morbi ultrices gravida
-              elementum eget.
-            </p>
-            <p className="pb-5">
-              The scale & certainty of a tier one construction company, with the
-              culture & agility to stay ahead of change.
+              We believe in building more than just homes — we build trust.
+              Whether you're renovating a single room or developing an entire
+              property, SGK Construction brings the knowledge, craftsmanship,
+              and care needed to make your project a success from start to
+              finish.
             </p>
             <CustomButton to="/company-profile">Learn more</CustomButton>
           </div>
