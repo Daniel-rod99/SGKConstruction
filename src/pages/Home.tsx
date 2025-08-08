@@ -197,8 +197,8 @@ export default function Home() {
         <h1 className="text-2xl md:text-4xl lg:text-6xl text-center font-medium">
           Why Choose Us?
         </h1>
-        <div className="md:grid md:grid-cols-3 md:grid-rows-1 py-10 text-center gap-10">
-          <div className="border-b md:border-0 border-gray-300">
+        <div className="md:grid md:grid-cols-3 py-10 text-center gap-5">
+          <div className="border-b md:border-b-0 md:border-r-1 border-gray-300">
             <div className="flex flex-col items-center md:flex-row gap-4">
               <span className="rounded-[50%] md:rounded-[50%] bg-[var(--color-secondary)] h-16 w-16 flex items-center justify-center">
                 <WorkspacePremiumOutlinedIcon
@@ -209,13 +209,14 @@ export default function Home() {
                 High quality
               </h2>
             </div>
-            <p className=" lg:text-justify py-5">
+            <p className=" lg:text-justify py-5 md:mr-5">
               Lorem ipsum dolor sit amet consectetur. Eros nulla sit pellentesq
               molestie odio amet consectetur maecenas. Et cursus sapien at nisl
               matt phasellus. Sit sagittis donec nullam nunc volutpat suscipit
               pulvinar. Morbi ultrices gravida elementum eget.
             </p>
           </div>
+
           <div className="border-b md:border-0 border-gray-300 mt-5 md:mt-0">
             <div className="flex flex-col items-center md:flex-row gap-4">
               <span className="rounded-[50%] md:rounded-[50%] bg-[var(--color-secondary)] h-16 w-16 flex items-center justify-center">
@@ -232,8 +233,9 @@ export default function Home() {
               pulvinar. Morbi ultrices gravida elementum eget.
             </p>
           </div>
-          <div className="border-b md:border-0 border-gray-300 mt-5 md:mt-0">
-            <div className="flex flex-col items-center md:flex-row gap-4">
+
+          <div className="border-b md:border-0 md:border-l-1 border-gray-300 mt-5 md:mt-0">
+            <div className="flex flex-col items-center md:flex-row gap-4 md:ml-5">
               <span className="rounded-[50%] md:rounded-[50%] bg-[var(--color-secondary)] h-16 w-16 flex items-center justify-center">
                 <CalendarMonthOutlinedIcon
                   sx={{ fontSize: "2.25rem", color: "white" }}
@@ -241,7 +243,7 @@ export default function Home() {
               </span>
               <h2 className="font-semibold text-lg md:text-2xl">On schedule</h2>
             </div>
-            <p className=" lg:text-justify py-5">
+            <p className=" lg:text-justify py-5 md:ml-5">
               Lorem ipsum dolor sit amet consectetur. Eros nulla sit pellentesq
               molestie odio amet consectetur maecenas. Et cursus sapien at nisl
               matt phasellus. Sit sagittis donec nullam nunc volutpat suscipit

@@ -17,7 +17,7 @@ export default function ProjectCard({ project }: Props) {
       <CustomImg
         src={project.image}
         alt={project.title}
-        className="object-cover w-full max-h-[600px] rounded-br-[100px] lg:rounded-br-[200px] h-[500px]"
+        className="object-cover w-full max-h-[600px] rounded-br-[100px] lg:rounded-br-[200px] lg:h-[500px] h-[250px]"
       />
       <div className="py-4">
         <h2 className="text-xl lg:text-3xl font-semibold">{project.title}</h2>
