@@ -14,7 +14,11 @@ export default function ProjectCard({ project }: Props) {
 
   return (
     <div className="overflow-hidden">
-      <CustomImg src={project.image} alt={project.title} />
+      <CustomImg
+        src={project.image}
+        alt={project.title}
+        className="object-cover w-full max-h-[600px] rounded-br-[100px] lg:rounded-br-[200px] h-[500px]"
+      />
       <div className="py-4">
         <h2 className="text-xl lg:text-3xl font-semibold">{project.title}</h2>
       </div>

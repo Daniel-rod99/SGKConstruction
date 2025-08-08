@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ContactForm from "./ContactForm";
+import TestimonialCarousel from "./TestimonialCarousel";
 
 export default function ProjectDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -29,7 +30,7 @@ export default function ProjectDetailPage() {
     <>
       <Header />
       <div className="py-20 px-5 md:px-10 max-w-[1600px] mx-auto">
-        {/* Botón Volver */}
+        {/* BUTTON BACK */}
         <button
           onClick={() => navigate(-1)}
           className="mb-8 flex items-center gap-2 text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition"
@@ -37,22 +38,22 @@ export default function ProjectDetailPage() {
           <ArrowBackIcon /> Back to Projects
         </button>
 
-        {/* Info principal */}
+        {/* PRINCIPAL INFO */}
         <h1 className="text-4xl lg:text-6xl font-bold mb-6">{project.title}</h1>
         <p className="text-lg text-gray-700 mb-4">{project.description}</p>
         <p className="text-xl font-semibold mb-8">Price: {project.price}</p>
 
-        {/* Imagen principal con transición */}
+        {/* PRINCIPAL IMAGE */}
         <div className="mb-6 w-full h-[400px] md:h-[500px] lg:h-[700px] overflow-hidden rounded-lg shadow-lg">
           <img
             src={activeImage}
             alt={project.title}
-            className="w-full h-full object-cover transition-opacity duration-500 ease-in-out"
-            key={activeImage} // fuerza la animación al cambiar
+            className="w-full h-full object-contain transition-opacity duration-500 ease-in-out"
+            key={activeImage}
           />
         </div>
 
-        {/* Miniaturas - scroll horizontal si son muchas */}
+        {/* SCROLL IMAGES */}
         <div className="flex gap-4 overflow-x-auto pb-4 mb-8">
           {project.gallery.map((img, idx) => (
             <img
@@ -69,7 +70,7 @@ export default function ProjectDetailPage() {
           ))}
         </div>
 
-        {/* Características */}
+        {/* FEATURES */}
         <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
         <ul className="list-disc pl-6 space-y-2">
           {project.features.map((feature, idx) => (
@@ -77,6 +78,8 @@ export default function ProjectDetailPage() {
           ))}
         </ul>
       </div>
+
+      <TestimonialCarousel />
 
       <ContactForm />
       <Footer />

@@ -4,14 +4,20 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Luxury Villa",
-    image: "/building.webp",
+    image: "/project1/p1Image1.jpg",
     position: "Los Angeles, CA",
     time: "18 months",
     category: "Residential",
     price: "$2,500,000",
     description:
       "A modern luxury villa with open spaces, premium finishes, and breathtaking views of the ocean. Designed with energy efficiency and comfort in mind.",
-    gallery: ["/building.webp", "/tower.webp", "/villa3.webp"],
+    gallery: [
+      "/project1/p1Image1.jpg",
+      "/project1/p1Image2.jpg",
+      "/project1/p1Image3.jpg",
+      "/project1/p1Image4.jpg",
+      "/project1/p1Image5.jpg",
+    ],
     features: [
       "5 bedrooms, 6 bathrooms",
       "Infinity pool with ocean view",
@@ -22,14 +28,20 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Modern Office",
-    image: "/tower.webp",
+    image: "/project2/p2Image1.jpg",
     position: "Los Angeles, CA",
     time: "18 months",
     category: "Hospitality",
     price: "$4,200,000",
     description:
       "State-of-the-art office space in the heart of the city, featuring modern design, flexible work areas, and eco-friendly construction.",
-    gallery: ["/office1.webp", "/office2.webp", "/office3.webp"],
+    gallery: [
+      "/project2/p2Image1.jpg",
+      "/project2/p2Image2.jpg",
+      "/project2/p2Image3.jpg",
+      "/project2/p2Image4.jpg",
+      "/project2/p2Image5.jpg",
+    ],
     features: [
       "Open space workstations",
       "Conference halls",
@@ -40,14 +52,20 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "School",
-    image: "/building.webp",
+    image: "/project3/p3Image1.jpg",
     position: "Los Angeles, CA",
     time: "18 months",
     category: "Residential",
     price: "$2,500,000",
     description:
       "A modern luxury villa with open spaces, premium finishes, and breathtaking views of the ocean. Designed with energy efficiency and comfort in mind.",
-    gallery: ["/villa1.webp", "/villa2.webp", "/villa3.webp"],
+    gallery: [
+      "/project3/p3Image1.jpg",
+      "/project3/p3Image2.jpg",
+      "/project3/p3Image3.jpg",
+      "/project3/p3Image4.jpg",
+      "/project3/p3Image5.jpg",
+    ],
     features: [
       "5 bedrooms, 6 bathrooms",
       "Infinity pool with ocean view",
@@ -58,14 +76,20 @@ export const projects: Project[] = [
   {
     id: 4,
     title: "House",
-    image: "/tower.webp",
+    image: "/project4/p4Image1.jpg",
     position: "Los Angeles, CA",
     time: "18 months",
     category: "Hospitality",
     price: "$4,200,000",
     description:
       "State-of-the-art office space in the heart of the city, featuring modern design, flexible work areas, and eco-friendly construction.",
-    gallery: ["/office1.webp", "/office2.webp", "/office3.webp"],
+    gallery: [
+      "/project4/p4Image1.jpg",
+      "/project4/p4Image2.jpg",
+      "/project4/p4Image3.jpg",
+      "/project4/p4Image4.jpg",
+      "/project4/p4Image5.jpg",
+    ],
     features: [
       "Open space workstations",
       "Conference halls",
@@ -76,14 +100,20 @@ export const projects: Project[] = [
   {
     id: 5,
     title: "Luxury Villa",
-    image: "/building.webp",
+    image: "/project5/p5Image1.jpg",
     position: "Los Angeles, CA",
     time: "18 months",
     category: "Residential",
     price: "$2,500,000",
     description:
       "A modern luxury villa with open spaces, premium finishes, and breathtaking views of the ocean. Designed with energy efficiency and comfort in mind.",
-    gallery: ["/building.webp", "/tower.webp", "/villa3.webp"],
+    gallery: [
+      "/project5/p5Image1.jpg",
+      "/project5/p5Image2.jpg",
+      "/project5/p5Image3.jpg",
+      "/project5/p5Image4.jpg",
+      "/project5/p5Image5.jpg",
+    ],
     features: [
       "5 bedrooms, 6 bathrooms",
       "Infinity pool with ocean view",
@@ -94,14 +124,20 @@ export const projects: Project[] = [
   {
     id: 6,
     title: "Modern Office",
-    image: "/tower.webp",
+    image: "/project6/p6Image1.jpg",
     position: "Los Angeles, CA",
     time: "18 months",
     category: "Hospitality",
     price: "$4,200,000",
     description:
       "State-of-the-art office space in the heart of the city, featuring modern design, flexible work areas, and eco-friendly construction.",
-    gallery: ["/office1.webp", "/office2.webp", "/office3.webp"],
+    gallery: [
+      "/project6/p6Image1.jpg",
+      "/project6/p6Image2.jpg",
+      "/project6/p6Image3.jpg",
+      "/project6/p6Image4.jpg",
+      "/project6/p6Image5.jpg",
+    ],
     features: [
       "Open space workstations",
       "Conference halls",
@@ -112,14 +148,20 @@ export const projects: Project[] = [
   {
     id: 7,
     title: "School",
-    image: "/building.webp",
+    image: "/project7/p7Image1.jpg",
     position: "Los Angeles, CA",
     time: "18 months",
     category: "Residential",
     price: "$2,500,000",
     description:
       "A modern luxury villa with open spaces, premium finishes, and breathtaking views of the ocean. Designed with energy efficiency and comfort in mind.",
-    gallery: ["/villa1.webp", "/villa2.webp", "/villa3.webp"],
+    gallery: [
+      "/project7/p7Image1.jpg",
+      "/project7/p7Image2.jpg",
+      "/project7/p7Image3.jpg",
+      "/project7/p7Image4.jpg",
+      "/project7/p7Image5.jpg",
+    ],
     features: [
       "5 bedrooms, 6 bathrooms",
       "Infinity pool with ocean view",
@@ -130,14 +172,20 @@ export const projects: Project[] = [
   {
     id: 8,
     title: "House",
-    image: "/tower.webp",
+    image: "/project8/p8Image1.jpg",
     position: "Los Angeles, CA",
     time: "18 months",
     category: "Hospitality",
     price: "$4,200,000",
     description:
       "State-of-the-art office space in the heart of the city, featuring modern design, flexible work areas, and eco-friendly construction.",
-    gallery: ["/office1.webp", "/office2.webp", "/office3.webp"],
+    gallery: [
+      "/project8/p8Image1.jpg",
+      "/project8/p8Image2.jpg",
+      "/project8/p8Image3.jpg",
+      "/project8/p8Image4.jpg",
+      "/project8/p8Image5.jpg",
+    ],
     features: [
       "Open space workstations",
       "Conference halls",
