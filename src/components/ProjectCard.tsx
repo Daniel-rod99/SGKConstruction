@@ -1,6 +1,6 @@
+import { useNavigate } from "react-router-dom";
 import type { Project } from "../types/Project";
 import CustomImg from "./CustomImg";
-
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 import CustomButton from "./CustomButton";
@@ -10,6 +10,8 @@ interface Props {
 }
 
 export default function ProjectCard({ project }: Props) {
+  const navigate = useNavigate();
+
   return (
     <div className="overflow-hidden">
       <CustomImg src={project.image} alt={project.title} />
@@ -31,7 +33,11 @@ export default function ProjectCard({ project }: Props) {
         </h3>
       </div>
       <div className="pb-4">
-        <CustomButton to="/services" showArrow>
+        <CustomButton
+          to="#"
+          onClick={() => navigate(`/projects/${project.id}`)}
+          showArrow
+        >
           View Project
         </CustomButton>
       </div>

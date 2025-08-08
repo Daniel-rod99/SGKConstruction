@@ -5,6 +5,7 @@ import Services from "./pages/Services";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
+import ProjectDetailPage from "./components/ProjectDetailPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/projects/:id" element={<ProjectDetailPage />} />
       </Routes>
     </>
   );
