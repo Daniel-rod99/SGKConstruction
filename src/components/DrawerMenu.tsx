@@ -27,7 +27,7 @@ export default function DrawerMenu() {
     { label: "Company Profile", path: "/company-profile" },
     { label: "Service", path: "/services" },
     { label: "Projects", path: "/projects" },
-    { label: "Contact", path: "/contact" },
+    { label: "Contact Us", path: "/contact" },
   ];
 
   const DrawerList = (

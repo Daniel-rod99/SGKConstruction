@@ -16,9 +16,11 @@ export default function ContactWhatsApp() {
           >
             <p className="flex gap-3">
               <WhatsAppIcon className="text-green-500 text-5xl mb-4" />
-              <span className="text-xl font-semibold mb-2">+1 234 567 890</span>
+              <span className="text-xl font-semibold mb-2">
+                +1 818 822 2232
+              </span>
             </p>
-            <h2 className="text-lg font-medium">Adolfo Smith</h2>
+            <h2 className="text-lg font-medium">Socratis Koocheradis</h2>
             <h2 className="text-lg font-medium">English</h2>
           </motion.a>
 
@@ -30,9 +32,11 @@ export default function ContactWhatsApp() {
           >
             <p className="flex gap-3">
               <WhatsAppIcon className="text-green-500 text-5xl mb-4" />
-              <span className="text-xl font-semibold mb-2">+1 234 567 890</span>
+              <span className="text-xl font-semibold mb-2">
+                +1 747 288 1357
+              </span>
             </p>
-            <h2 className="text-lg font-medium">Karen Vallejo</h2>
+            <h2 className="text-lg font-medium">Karen Rodriguez</h2>
             <h2 className="text-lg font-medium">Español</h2>
           </motion.a>
         </div>

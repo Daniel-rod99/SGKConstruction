@@ -112,16 +112,16 @@ export default function Footer() {
           <motion.div {...fadeUp}>
             <h3 className="font-semibold mb-4 uppercase">Contact</h3>
             <ul className="space-y-2 text-sm">
-              <p>1045 Regent Dr, Los Angeles, California, United States</p>
+              <p>Sherman Oaks, Los Angeles CA 91403 United States</p>
 
               <li>
                 <a href="mailto:info@company.com" className="hover:underline">
-                  contact@sgkconstruction.com
+                  sgkconstruction.la@gmail.com
                 </a>
               </li>
               <li>
                 <a href="/locations" className="hover:underline">
-                  618-417-2716
+                  +1 818 822 2232
                 </a>
               </li>
             </ul>
