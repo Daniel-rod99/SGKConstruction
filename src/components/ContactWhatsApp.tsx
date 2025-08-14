@@ -26,7 +26,7 @@ export default function ContactWhatsApp() {
 
           <motion.a
             {...fadeUp}
-            href="https://wa.me/0987654321"
+            href="https://wa.me/+1 747 288 1357"
             target="_blank"
             className="bg-white p-6 rounded shadow-2xl flex flex-col items-center text-center hover:scale-105 transition transform"
           >
