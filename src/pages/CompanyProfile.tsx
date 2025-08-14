@@ -68,8 +68,12 @@ export default function CompanyProfile() {
               Our mission
             </h1>
             <p className="pb-5">
-              Is to provide top-quality construction, remodeling, and repair
-              services to homeowners and businesses throughout Los Angeles.
+              At SGK Construction, our mission is to provide top-quality
+              construction, remodeling, and repair services to homeowners and
+              businesses throughout Los Angeles. We are committed to
+              craftsmanship, reliability, and honest communication — delivering
+              every project with pride, precision, and over 35 years of
+              experience.
             </p>
           </div>
 

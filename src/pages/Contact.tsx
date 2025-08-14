@@ -1,4 +1,5 @@
 import ContactForm from "../components/ContactForm";
+import ContactWhatsApp from "../components/ContactWhatsApp";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
@@ -14,13 +15,16 @@ export default function Contact() {
               Contact us
             </h1>
             <p className="text-white lg:text-xl pb-5 row-start-2 pt-10 md:pt-0 lg:pt-10">
-              SGKConstruction’s legacy of successfully completed projects is the
-              best demonstration of our capabilities. We have a diverse
-              portfolio which showcases our deep expertise and experience.
+              We are here to answer your questions, provide guidance, and help
+              you start your next project with confidence. Reach out to us and
+              our team will ensure a prompt, professional, and personalized
+              response.
             </p>
           </div>
         </div>
       </section>
+
+      <ContactWhatsApp />
 
       <ContactForm showImage={false} />
 

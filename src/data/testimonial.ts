@@ -3,27 +3,37 @@ import type { Testimonial } from "../types/Testimonial";
 export const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "María González",
+    name: "Sarah Johnson",
     comment:
-      "SGK hizo realidad nuestro sueño. Profesionalismo y calidad en cada detalle.",
-    position: "Arquitecta",
+      "SGK Construction transformed our house into the home of our dreams. Their attention to detail, professionalism, and dedication made the entire process smooth and enjoyable.",
+    position: "Homeowner",
   },
   {
     id: 2,
-    name: "Carlos Pérez",
-    comment: "La mejor experiencia que he tenido con una empresa constructora.",
-    position: "Cliente particular",
+    name: "Michael Lee",
+    comment:
+      "They delivered our restaurant renovation on time and on budget. The craftsmanship and design truly stand out, making our space welcoming and unique.",
+    position: "Restaurant Owner",
   },
   {
     id: 3,
     name: "Lucía Ramírez",
-    comment: "Cumplieron todo lo prometido y más. 100% recomendados.",
-    position: "Propietaria de local",
+    comment:
+      "Working with SGK Construction was seamless. They understood our vision and executed it with precision, creativity, and care, making the project a complete success.",
+    position: "Architect",
   },
   {
     id: 4,
-    name: "Daniel Ramírez",
-    comment: "lorem ahishuia ahsiuhiha aoiuhdioauhd uasuihd haui huash",
-    position: "Propietaria de local",
+    name: "James Carter",
+    comment:
+      "Every project is handled with integrity and quality. Their team is reliable, efficient, and innovative, delivering results that consistently exceed expectations.",
+    position: "Real Estate Developer",
+  },
+  {
+    id: 5,
+    name: "Olivia Martinez,",
+    comment:
+      "We were impressed with the professionalism and communication throughout our office remodel. SGK Construction made sure every detail was perfect, and we are thrilled with the result.",
+    position: "Office Manager",
   },
 ];

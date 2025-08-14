@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeUp } from "../types/animations";
+
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { testimonials } from "../data/testimonial";
@@ -28,7 +31,10 @@ export default function TestimonialCarousel() {
   });
 
   return (
-    <section className="bg-[#F7F8F9] py-10 md:py-20 relative">
+    <motion.section
+      {...fadeUp}
+      className="bg-[#F7F8F9] py-10 md:py-20 relative"
+    >
       <div className="max-w-[1600px] mx-auto px-5 md:px-10">
         <h2 className="text-2xl md:text-4xl text-center font-semibold mb-10">
           What our clients say
@@ -86,6 +92,6 @@ export default function TestimonialCarousel() {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
