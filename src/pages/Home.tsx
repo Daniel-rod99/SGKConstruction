@@ -22,7 +22,7 @@ export default function Home() {
       <Header isHome />
 
       {/* SECTION HERO */}
-      <motion.div {...fadeUp} className="md:px-4 mx-auto max-w-[1600px]">
+      <div className="md:px-4 mx-auto max-w-[1600px]">
         {/* HERO SECTION */}
         <div className="flex flex-col gap-4 py-10 px-5 md:px-10 md:py-20 md:flex-row">
           <div className="md:w-2/3">
@@ -40,11 +40,14 @@ export default function Home() {
             </motion.p>
           </div>
 
-          <div className="flex items-center justify-center md:w-1/3 ">
+          <motion.div
+            {...fadeUp}
+            className="flex items-center justify-center md:w-1/3 "
+          >
             <CustomButton to="/services" showArrow>
               See our Service
             </CustomButton>
-          </div>
+          </motion.div>
         </div>
 
         <motion.div
@@ -53,7 +56,7 @@ export default function Home() {
         >
           <CustomImg src="/tower.webp" alt="Tower Img" />
         </motion.div>
-      </motion.div>
+      </div>
 
       {/* DIV SPACER*/}
       <div className="bg-[var(--color-primary)] h-[150px] md:h-[250px] lg:h-[350px]"></div>
@@ -74,9 +77,12 @@ export default function Home() {
               deliver comfort, functionality, and long-lasting value, ensuring
               your vision becomes a reality while respecting the environment.
             </motion.p>
-            <CustomButton to="/services" showArrow>
-              See our Service
-            </CustomButton>
+
+            <motion.div {...fadeUp}>
+              <CustomButton to="/services" showArrow>
+                See our Service
+              </CustomButton>
+            </motion.div>
           </div>
 
           {/* CUSTOM ACCORDION*/}
@@ -210,167 +216,189 @@ export default function Home() {
       </div>
 
       {/* SECTION WHY CHOOSE US */}
-      <motion.div
-        {...fadeUp}
-        className="py-5 md:py-10 w-full max-w-[1520px] mx-auto px-5 md:px-10 bg-[#F7F8F9]"
-      >
-        <h1 className="text-2xl md:text-4xl lg:text-6xl text-center font-medium">
+      <div className="py-5 md:py-10 w-full max-w-[1520px] mx-auto px-5 md:px-10 bg-[#F7F8F9]">
+        <motion.h1
+          {...fadeUp}
+          className="text-2xl md:text-4xl lg:text-6xl text-center font-medium"
+        >
           Why Choose Us?
-        </h1>
+        </motion.h1>
         <div className="md:grid md:grid-cols-3 py-10 text-center gap-5">
           <div className="border-b md:border-b-0 md:border-r-1 border-gray-300">
             <div className="flex flex-col items-center md:flex-row gap-4">
-              <span className="rounded-[50%] md:rounded-[50%] bg-[var(--color-secondary)] h-16 w-16 flex items-center justify-center">
+              <motion.span
+                {...fadeUp}
+                className="rounded-[50%] md:rounded-[50%] bg-[var(--color-secondary)] h-16 w-16 flex items-center justify-center"
+              >
                 <WorkspacePremiumOutlinedIcon
                   sx={{ fontSize: "2.25rem", color: "white" }}
                 />
-              </span>
-              <h2 className="font-semibold text-lg md:text-2xl">
+              </motion.span>
+              <motion.h2
+                {...fadeUp}
+                className="font-semibold text-lg md:text-2xl"
+              >
                 High quality
-              </h2>
+              </motion.h2>
             </div>
-            <p className=" lg:text-justify py-5 md:mr-5">
+            <motion.p {...fadeUp} className=" lg:text-justify py-5 md:mr-5">
               We deliver exceptional craftsmanship and attention to detail in
               every project, ensuring that each build meets the highest
               standards of quality and design excellence.
-            </p>
+            </motion.p>
           </div>
 
           <div className="border-b md:border-0 border-gray-300 mt-5 md:mt-0">
             <div className="flex flex-col items-center md:flex-row gap-4">
-              <span className="rounded-[50%] md:rounded-[50%] bg-[var(--color-secondary)] h-16 w-16 flex items-center justify-center">
+              <motion.span
+                {...fadeUp}
+                className="rounded-[50%] md:rounded-[50%] bg-[var(--color-secondary)] h-16 w-16 flex items-center justify-center"
+              >
                 <CurrencyExchangeOutlinedIcon
                   sx={{ fontSize: "2.25rem", color: "white" }}
                 />
-              </span>
-              <h2 className="font-semibold text-lg md:text-2xl">On budget</h2>
+              </motion.span>
+              <motion.h2
+                {...fadeUp}
+                className="font-semibold text-lg md:text-2xl"
+              >
+                On budget
+              </motion.h2>
             </div>
-            <p className=" lg:text-justify py-5">
+            <motion.p {...fadeUp} className=" lg:text-justify py-5">
               Our team carefully plans and manages every project to stay within
               budget, providing transparent estimates and avoiding unexpected
               costs without compromising quality.
-            </p>
+            </motion.p>
           </div>
 
           <div className="border-b md:border-0 md:border-l-1 border-gray-300 mt-5 md:mt-0">
             <div className="flex flex-col items-center md:flex-row gap-4 md:ml-5">
-              <span className="rounded-[50%] md:rounded-[50%] bg-[var(--color-secondary)] h-16 w-16 flex items-center justify-center">
+              <motion.span
+                {...fadeUp}
+                className="rounded-[50%] md:rounded-[50%] bg-[var(--color-secondary)] h-16 w-16 flex items-center justify-center"
+              >
                 <CalendarMonthOutlinedIcon
                   sx={{ fontSize: "2.25rem", color: "white" }}
                 />
-              </span>
-              <h2 className="font-semibold text-lg md:text-2xl">On schedule</h2>
+              </motion.span>
+              <motion.h2
+                {...fadeUp}
+                className="font-semibold text-lg md:text-2xl"
+              >
+                On schedule
+              </motion.h2>
             </div>
-            <p className=" lg:text-justify py-5 md:ml-5">
+            <motion.p {...fadeUp} className=" lg:text-justify py-5 md:ml-5">
               We respect timelines and deliver projects on schedule,
               coordinating all phases efficiently to ensure your goals are met
               promptly and professionally.
-            </p>
+            </motion.p>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* SECTION PROJECTS PREVIEW */}
-      <motion.div
-        {...fadeUp}
-        className="py-15 md:py-20 lg:py-34 w-full max-w-[1600px] mx-auto px-5 md:px-10"
-      >
+      <div className="py-15 md:py-20 lg:py-34 w-full max-w-[1600px] mx-auto px-5 md:px-10">
         <section>
-          <h2 className="text-3xl font-semibold text-center mb-10">
+          <motion.h2
+            {...fadeUp}
+            className="text-3xl font-semibold text-center mb-10"
+          >
             Our successful projects
-          </h2>
+          </motion.h2>
           <div className="grid md:grid-cols-2 gap-20">
             {projects.slice(0, 4).map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
-          <div className="mt-10 text-center">
+          <motion.div {...fadeUp} className="mt-10 text-center">
             <CustomButton to="/projects">View All</CustomButton>
-          </div>
+          </motion.div>
         </section>
-      </motion.div>
+      </div>
 
       {/* SECTION TESTIMONIALS*/}
       <TestimonialCarousel />
 
       {/* SECTION QUESTIONS*/}
-      <motion.div
-        {...fadeUp}
-        className="max-w-[1600px] mx-auto py-10 px-5 md:px-10"
-      >
+      <div className="max-w-[1600px] mx-auto py-10 px-5 md:px-10">
         <div className="md:grid md:grid-cols-2 md:grid-rows-1 md:gap-4">
           <div>
-            <h1 className="text-2xl md:text-4xl lg:text-6xl font-semibold pb-5">
+            <motion.h1
+              {...fadeUp}
+              className="text-2xl md:text-4xl lg:text-6xl font-semibold pb-5"
+            >
               Frequently asked questions
-            </h1>
+            </motion.h1>
           </div>
           <div className="lg:text-xl">
             <CustomAccordion
               items={[
                 {
                   title: (
-                    <h2 className="font-medium lg:pb-5">
+                    <motion.h2 {...fadeUp} className="font-medium lg:pb-5">
                       What types of projects do you handle?
-                    </h2>
+                    </motion.h2>
                   ),
                   content: (
-                    <p className="text-[16px]">
+                    <motion.p {...fadeUp} className="text-[16px]">
                       We manage a wide range of construction projects, including
                       residential homes, commercial buildings, office
                       renovations, and specialized custom constructions tailored
                       to each client’s needs.
-                    </p>
+                    </motion.p>
                   ),
                   color: "black",
                   showDivider: false,
                 },
                 {
                   title: (
-                    <h2 className="font-medium lg:pb-5">
+                    <motion.h2 {...fadeUp} className="font-medium lg:pb-5">
                       How do you ensure projects stay on schedule?
-                    </h2>
+                    </motion.h2>
                   ),
                   content: (
-                    <p className="text-[16px]">
+                    <motion.p {...fadeUp} className="text-[16px]">
                       Our team carefully plans every phase of construction,
                       monitors progress regularly, and communicates
                       transparently with clients to ensure deadlines are met
                       efficiently.
-                    </p>
+                    </motion.p>
                   ),
                   color: "black",
                   showDivider: false,
                 },
                 {
                   title: (
-                    <h2 className="font-medium lg:pb-5">
+                    <motion.h2 {...fadeUp} className="font-medium lg:pb-5">
                       Do you provide cost estimates before starting?
-                    </h2>
+                    </motion.h2>
                   ),
                   content: (
-                    <p className="text-[16px]">
+                    <motion.p {...fadeUp} className="text-[16px]">
                       Yes, we offer detailed and transparent cost estimates
                       before any project begins, helping clients understand the
                       budget and avoid unexpected expenses while maintaining
                       high quality.
-                    </p>
+                    </motion.p>
                   ),
                   color: "black",
                   showDivider: false,
                 },
                 {
                   title: (
-                    <h2 className="font-medium lg:pb-5">
+                    <motion.h2 {...fadeUp} className="font-medium lg:pb-5">
                       Can you handle eco-friendly and sustainable construction?
-                    </h2>
+                    </motion.h2>
                   ),
                   content: (
-                    <p className="text-[16px]">
+                    <motion.p {...fadeUp} className="text-[16px]">
                       Absolutely. We incorporate sustainable practices and
                       materials in all our projects, ensuring energy efficiency,
                       minimal environmental impact, and lasting results for our
                       clients.
-                    </p>
+                    </motion.p>
                   ),
                   color: "black",
                   showDivider: false,
@@ -379,13 +407,12 @@ export default function Home() {
             />
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* SECTION CONTACT*/}
-      <motion.div {...fadeUp}>
-        <ContactForm />
-        <Footer />
-      </motion.div>
+
+      <ContactForm />
+      <Footer />
     </>
   );
 }

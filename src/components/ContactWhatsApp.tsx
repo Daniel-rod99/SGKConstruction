@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeUp } from "../types/animations";
+
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 export default function ContactWhatsApp() {
@@ -5,7 +8,8 @@ export default function ContactWhatsApp() {
     <section className="py-10 md:py-20">
       <div className="max-w-[1600px] mx-auto px-5 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <a
+          <motion.a
+            {...fadeUp}
             href="https://wa.me/1234567890"
             target="_blank"
             className="bg-white p-6 rounded shadow-2xl flex flex-col items-center text-center hover:scale-105 transition transform"
@@ -16,9 +20,10 @@ export default function ContactWhatsApp() {
             </p>
             <h2 className="text-lg font-medium">Adolfo Smith</h2>
             <h2 className="text-lg font-medium">English</h2>
-          </a>
+          </motion.a>
 
-          <a
+          <motion.a
+            {...fadeUp}
             href="https://wa.me/0987654321"
             target="_blank"
             className="bg-white p-6 rounded shadow-2xl flex flex-col items-center text-center hover:scale-105 transition transform"
@@ -29,7 +34,7 @@ export default function ContactWhatsApp() {
             </p>
             <h2 className="text-lg font-medium">Karen Vallejo</h2>
             <h2 className="text-lg font-medium">Español</h2>
-          </a>
+          </motion.a>
         </div>
       </div>
     </section>

@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeUp } from "../types/animations";
+
 import { useNavigate } from "react-router-dom";
 import type { Project } from "../types/Project";
 import CustomImg from "./CustomImg";
@@ -14,29 +17,33 @@ export default function ProjectCard({ project }: Props) {
 
   return (
     <div className="overflow-hidden">
-      <CustomImg
-        src={project.image}
-        alt={project.title}
-        className="object-cover w-full max-h-[600px] rounded-br-[100px] lg:rounded-br-[200px] lg:h-[500px] h-[250px]"
-      />
+      <motion.div {...fadeUp}>
+        <CustomImg
+          src={project.image}
+          alt={project.title}
+          className="object-cover w-full max-h-[600px] rounded-br-[100px] lg:rounded-br-[200px] lg:h-[500px] h-[250px]"
+        />
+      </motion.div>
       <div className="py-4">
-        <h2 className="text-xl lg:text-3xl font-semibold">{project.title}</h2>
+        <motion.h2 {...fadeUp} className="text-xl lg:text-3xl font-semibold">
+          {project.title}
+        </motion.h2>
       </div>
       <div className="flex pb-4 gap-4 m-auto">
-        <h3 className="gap-2 flex">
-          <span className=" text-[var(--color-secondary)]">
+        <motion.h3 {...fadeUp} className="gap-2 flex">
+          <motion.span {...fadeUp} className=" text-[var(--color-secondary)]">
             <FmdGoodOutlinedIcon />
-          </span>
+          </motion.span>
           {project.position}
-        </h3>
-        <h3 className="gap-2 flex">
-          <span className=" text-[var(--color-secondary)]">
+        </motion.h3>
+        <motion.h3 {...fadeUp} className="gap-2 flex">
+          <motion.span {...fadeUp} className=" text-[var(--color-secondary)]">
             <CalendarMonthOutlinedIcon />
-          </span>
+          </motion.span>
           {project.time}
-        </h3>
+        </motion.h3>
       </div>
-      <div className="pb-4">
+      <motion.div {...fadeUp} className="pb-4">
         <CustomButton
           to="#"
           onClick={() => navigate(`/projects/${project.id}`)}
@@ -44,7 +51,7 @@ export default function ProjectCard({ project }: Props) {
         >
           View Project
         </CustomButton>
-      </div>
+      </motion.div>
     </div>
   );
 }

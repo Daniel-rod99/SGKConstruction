@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeUp } from "../types/animations";
+
 import ContactForm from "../components/ContactForm";
 import CustomImg from "../components/CustomImg";
 import Footer from "../components/Footer";
@@ -11,13 +14,16 @@ export default function CompanyProfile() {
       <div className="bg-[var(--color-primary)] relative">
         <div className="py-10 lg:py-24 w-full max-w-[1600px] mx-auto px-5 md:px-10 text-white relative z-10">
           <div>
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold pb-10">
+            <motion.h1
+              {...fadeUp}
+              className="text-4xl md:text-6xl lg:text-8xl font-bold pb-10"
+            >
               About us
-            </h1>
+            </motion.h1>
           </div>
 
           <div className="md:grid md:grid-cols-2 md:gap-14 relative">
-            <div className="relative">
+            <motion.div {...fadeUp} className="relative">
               <CustomImg
                 className="object-cover rounded-br-[100px] lg:rounded-br-[200px] 
                      w-full h-full 
@@ -29,9 +35,9 @@ export default function CompanyProfile() {
 
               {/* SPACER HIDDEN */}
               <div className="hidden lg:block lg:w-[500px]"></div>
-            </div>
+            </motion.div>
 
-            <div className="relative z-10">
+            <motion.div {...fadeUp} className="relative z-10">
               <h1 className="font-semibold lg:text-5xl text-2xl md:text-3xl pb-5 pt-5 md:pt-0 text-[var(--color-secondary)]">
                 We are your partner in building legacy
               </h1>
@@ -50,7 +56,7 @@ export default function CompanyProfile() {
                 and care needed to make your project a success from start to
                 finish.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -58,34 +64,47 @@ export default function CompanyProfile() {
       {/* OUR MISSION AND VISION*/}
       <div className="py-10 lg:py-24 w-full max-w-[1600px] mx-auto px-5 md:px-10">
         <div className="md:grid md:grid-cols-2 md:gap-5 md:auto-rows-auto">
-          <CustomImg
-            className="object-cover rounded-br-[100px] lg:rounded-br-[200px] col-start-2"
-            src="/tower.webp"
-            alt="Tower Img"
-          />
+          <motion.div {...fadeUp}>
+            <CustomImg
+              className="object-cover rounded-br-[100px] lg:rounded-br-[200px] col-start-2"
+              src="/tower.webp"
+              alt="Tower Img"
+            />
+          </motion.div>
           <div className="col-start-1 row-start-1 justify-end flex flex-col">
-            <h1 className="font-semibold text-4xl md:text-5xl pb-5 pt-5 md:pt-0">
+            <motion.h1
+              {...fadeUp}
+              className="font-semibold text-4xl md:text-5xl pb-5 pt-5 md:pt-0"
+            >
               Our mission
-            </h1>
-            <p className="pb-5">
+            </motion.h1>
+            <motion.p {...fadeUp} className="pb-5">
               At SGK Construction, our mission is to provide top-quality
               construction, remodeling, and repair services to homeowners and
               businesses throughout Los Angeles. We are committed to
               craftsmanship, reliability, and honest communication — delivering
               every project with pride, precision, and over 35 years of
               experience.
-            </p>
+            </motion.p>
           </div>
 
           <div className="col-start-1 lg:mt-20 pb-5">
-            <h1 className="font-semibold lg:text-4xl text-2xl text-[var(--color-secondary)]">
+            <motion.h1
+              {...fadeUp}
+              className="font-semibold lg:text-4xl text-2xl text-[var(--color-secondary)]"
+            >
               Honesty, reliability and superior craftsmanship.
-            </h1>
+            </motion.h1>
           </div>
 
           <div className="col-start-2 lg:mt-20">
-            <h1 className="font-semibold text-4xl md:text-5xl">Our vision</h1>
-            <p>
+            <motion.h1
+              {...fadeUp}
+              className="font-semibold text-4xl md:text-5xl"
+            >
+              Our vision
+            </motion.h1>
+            <motion.p {...fadeUp}>
               Our vision is to become one of the most trusted construction
               companies in Los Angeles - California, recognized for consistent
               quality, customer satisfaction, and meaningful contributions to
@@ -94,15 +113,15 @@ export default function CompanyProfile() {
                 We aim to grow our team, our impact, and our legacy — one
                 successful project at a time.
               </p>
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>
 
-      <div>
+      <motion.div {...fadeUp}>
         <ContactForm showImage={false} />
         <Footer />
-      </div>
+      </motion.div>
     </div>
   );
 }

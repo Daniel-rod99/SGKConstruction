@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeUp } from "../types/animations";
+
 import React, { useState } from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -23,7 +26,7 @@ export default function CustomAccordion({ items }: CustomAccordionProps) {
   const [expandedIndex, setExpandedIndex] = useState<number | false>(false);
 
   return (
-    <div>
+    <motion.div {...fadeUp}>
       {items.map((item, index) => (
         <div key={index}>
           <Accordion
@@ -66,6 +69,6 @@ export default function CustomAccordion({ items }: CustomAccordionProps) {
           )}
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 }

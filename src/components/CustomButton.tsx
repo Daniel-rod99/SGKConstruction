@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeUp } from "../types/animations";
+
 import { useNavigate } from "react-router-dom";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
@@ -34,7 +37,8 @@ export default function CustomButton({
   };
 
   return (
-    <button
+    <motion.button
+      {...fadeUp}
       type={type}
       disabled={disabled}
       className={className ?? DefaultButtonClass}
@@ -42,6 +46,6 @@ export default function CustomButton({
     >
       {showArrow && <ArrowForwardIcon className="mr-2" />}
       {children}
-    </button>
+    </motion.button>
   );
 }

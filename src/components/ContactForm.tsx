@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeUp } from "../types/animations";
+
 import { useState } from "react";
 import CustomButton from "./CustomButton";
 
@@ -81,14 +84,18 @@ export default function ContactForm({ showImage = true }: ContactFormProps) {
 
   return (
     <section className="py-10 md:py-20">
-      <div
+      <motion.div
+        {...fadeUp}
         className={`max-w-[1600px] mx-auto px-5 ${
           showImage ? "md:px-10" : "lg:px-62"
         }`}
       >
-        <h2 className="text-2xl md:text-4xl font-semibold mb-10 text-center">
+        <motion.h2
+          {...fadeUp}
+          className="text-2xl md:text-4xl font-semibold mb-10 text-center"
+        >
           Let's talk about your project!
-        </h2>
+        </motion.h2>
 
         <div
           className={`grid  gap-10 ${
@@ -157,7 +164,7 @@ export default function ContactForm({ showImage = true }: ContactFormProps) {
             </div>
           </form>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
