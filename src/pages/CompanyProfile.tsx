@@ -100,7 +100,7 @@ export default function CompanyProfile() {
           <div className="col-start-2 lg:mt-20">
             <motion.h1
               {...fadeUp}
-              className="font-semibold text-4xl md:text-5xl"
+              className="font-semibold text-4xl md:text-5xl pb-5"
             >
               Our vision
             </motion.h1>

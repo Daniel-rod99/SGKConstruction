@@ -31,18 +31,18 @@ export default function TestimonialCarousel() {
   });
 
   return (
-    <motion.section
-      {...fadeUp}
-      className="bg-[#F7F8F9] py-10 md:py-20 relative"
-    >
+    <section className="bg-[#F7F8F9] py-10 md:py-20 relative">
       <div className="max-w-[1600px] mx-auto px-5 md:px-10">
-        <h2 className="text-2xl md:text-4xl text-center font-semibold mb-10">
+        <motion.h2
+          {...fadeUp}
+          className="text-2xl md:text-4xl text-center font-semibold mb-10"
+        >
           What our clients say
-        </h2>
+        </motion.h2>
 
         <div className="relative md:px-12">
           {/* CAROUSEL */}
-          <div ref={sliderRef} className="keen-slider">
+          <motion.div {...fadeUp} ref={sliderRef} className="keen-slider">
             {testimonials.map((t) => (
               <div
                 key={t.id}
@@ -55,7 +55,7 @@ export default function TestimonialCarousel() {
                 )}
               </div>
             ))}
-          </div>
+          </motion.div>
 
           {/* ROW LEFT */}
           <button
@@ -92,6 +92,6 @@ export default function TestimonialCarousel() {
           ))}
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }
