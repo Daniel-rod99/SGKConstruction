@@ -45,17 +45,17 @@ export default function Footer() {
             <h3 className="font-semibold mb-4 uppercase">Quick links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/services/architecture" className="hover:underline">
+                <a href="/" className="hover:underline">
                   Home
                 </a>
               </li>
               <li>
-                <a href="/services/design" className="hover:underline">
+                <a href="/company-profile" className="hover:underline">
                   Company
                 </a>
               </li>
               <li>
-                <a href="/services/consulting" className="hover:underline">
+                <a href="/contact" className="hover:underline">
                   Contact Us
                 </a>
               </li>
@@ -97,13 +97,8 @@ export default function Footer() {
             <h3 className="font-semibold mb-4 uppercase">Useful Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/blog" className="hover:underline">
+                <a href="/terms" className="hover:underline">
                   Terms & Conditions
-                </a>
-              </li>
-              <li>
-                <a href="/faq" className="hover:underline">
-                  Privacy Policy
                 </a>
               </li>
             </ul>
@@ -112,15 +107,25 @@ export default function Footer() {
           <motion.div {...fadeUp}>
             <h3 className="font-semibold mb-4 uppercase">Contact</h3>
             <ul className="space-y-2 text-sm">
-              <p>Sherman Oaks, Los Angeles CA 91403 United States</p>
+              <a
+                href="https://www.google.com/maps?q=Sherman+Oaks,+Los+Angeles+CA+91403+United+States"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Sherman Oaks, Los Angeles CA 91403 United States
+              </a>
 
               <li>
-                <a href="mailto:info@company.com" className="hover:underline">
+                <a
+                  href="mailto:sgkconstruction.la@gmail.com"
+                  className="hover:underline"
+                >
                   sgkconstruction.la@gmail.com
                 </a>
               </li>
               <li>
-                <a href="/locations" className="hover:underline">
+                <a href="tel:+18188222232" className="hover:underline">
                   +1 818 822 2232
                 </a>
               </li>
