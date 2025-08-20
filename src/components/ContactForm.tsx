@@ -105,7 +105,7 @@ export default function ContactForm({ showImage = true }: ContactFormProps) {
           {showImage && (
             <div
               className="bg-cover bg-center h-[300px] md:h-auto"
-              style={{ backgroundImage: "url('/tower.webp')" }}
+              style={{ backgroundImage: "url('/contactFormImg.webp')" }}
             />
           )}
 

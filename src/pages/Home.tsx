@@ -30,7 +30,7 @@ export default function Home() {
               {...fadeUp}
               className="mb-4 text-[1.8rem] font-semibold lg:text-6xl md:text-4xl"
             >
-              Modern architecture and quality design
+              Modern and Quality build
             </motion.h1>
             <motion.p {...fadeUp}>
               At SGK Construction, we turn visions into reality. With decades of
@@ -54,7 +54,7 @@ export default function Home() {
           {...fadeUp}
           className="px-5 lg:h-[350px] h-[120px] md:h-[270px]"
         >
-          <CustomImg src="/tower.webp" alt="Tower Img" />
+          <CustomImg src="/heroImg.webp" alt="hero Img" />
         </motion.div>
       </div>
 
@@ -181,8 +181,8 @@ export default function Home() {
           <motion.div {...fadeUp}>
             <CustomImg
               className="md:h-full object-cover rounded-br-[100px] lg:rounded-br-[200px]"
-              src="/building.webp"
-              alt="Building Img"
+              src="/buildingLegacyImg.webp"
+              alt="buildingLegacy Img"
             />
           </motion.div>
           <motion.div {...fadeUp}>

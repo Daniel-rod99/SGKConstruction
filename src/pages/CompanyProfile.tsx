@@ -22,7 +22,7 @@ export default function CompanyProfile() {
             </motion.h1>
           </div>
 
-          <div className="md:grid md:grid-cols-2 md:gap-14 relative">
+          <div className="md:grid md:grid-cols-2 md:gap-14 relative lg:pb-10">
             <motion.div {...fadeUp} className="relative">
               <CustomImg
                 className="object-cover rounded-br-[100px] lg:rounded-br-[200px] 
@@ -67,8 +67,8 @@ export default function CompanyProfile() {
           <motion.div {...fadeUp}>
             <CustomImg
               className="object-cover rounded-br-[100px] lg:rounded-br-[200px] col-start-2"
-              src="/tower.webp"
-              alt="Tower Img"
+              src="/OurVisionImg.webp"
+              alt="OurVision Img"
             />
           </motion.div>
           <div className="col-start-1 row-start-1 justify-end flex flex-col">
