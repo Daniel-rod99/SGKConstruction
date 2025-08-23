@@ -16,7 +16,7 @@ export default function ProjectCard({ project }: Props) {
   const navigate = useNavigate();
 
   return (
-    <div className="overflow-hidden">
+    <div>
       <motion.div {...fadeUp}>
         <CustomImg
           src={project.image}
