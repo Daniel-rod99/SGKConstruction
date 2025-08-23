@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp } from "../types/animations";
+import { fadeUpImmediate } from "../types/animations";
 
 import { useState } from "react";
 import CustomButton from "./CustomButton";
@@ -85,7 +86,7 @@ export default function ContactForm({ showImage = true }: ContactFormProps) {
   return (
     <section className="py-10 md:py-20">
       <motion.div
-        {...fadeUp}
+        {...fadeUpImmediate}
         className={`max-w-[1600px] mx-auto px-5 ${
           showImage ? "md:px-10" : "lg:px-62"
         }`}

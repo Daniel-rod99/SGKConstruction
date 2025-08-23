@@ -3,6 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 
 import { motion } from "framer-motion";
 import { fadeUp } from "../types/animations";
+import { fadeUpImmediate } from "../types/animations";
 
 import Header from "../components/Header";
 import CustomButton from "../components/CustomButton";
@@ -27,12 +28,12 @@ export default function Home() {
         <div className="flex flex-col gap-4 py-10 px-5 md:px-10 md:py-20 md:flex-row">
           <div className="md:w-2/3">
             <motion.h1
-              {...fadeUp}
+              {...fadeUpImmediate}
               className="mb-4 text-[1.8rem] font-semibold lg:text-6xl md:text-4xl"
             >
               Modern and Quality build
             </motion.h1>
-            <motion.p {...fadeUp}>
+            <motion.p {...fadeUpImmediate}>
               At SGK Construction, we turn visions into reality. With decades of
               experience in residential and commercial projects, we combine
               modern architecture with superior craftsmanship to deliver spaces
@@ -41,7 +42,7 @@ export default function Home() {
           </div>
 
           <motion.div
-            {...fadeUp}
+            {...fadeUpImmediate}
             className="flex items-center justify-center md:w-1/3 "
           >
             <CustomButton to="/services" showArrow>
@@ -51,7 +52,7 @@ export default function Home() {
         </div>
 
         <motion.div
-          {...fadeUp}
+          {...fadeUpImmediate}
           className="px-5 lg:h-[350px] h-[120px] md:h-[270px]"
         >
           <CustomImg src="/heroImg.webp" alt="hero Img" />
@@ -90,12 +91,45 @@ export default function Home() {
             <CustomAccordion
               items={[
                 {
+                  title: <h2 className="">New construction</h2>,
+                  content: (
+                    <p>
+                      At SGK Construction, we specialize in building homes from
+                      the ground up with quality, precision, and care.
+                    </p>
+                  ),
+                  buttonLabel: (
+                    <span className="text-white cursor-pointer transform transition duration-300 hover:scale-105 hover:text-[var(--color-secondary)]">
+                      Explore more
+                    </span>
+                  ),
+                  buttonHref: "/services",
+                },
+                {
+                  title: <h2 className="">Remodeling Services</h2>,
+                  content: (
+                    <p>
+                      Transform your home with SGK Construction’s expert
+                      remodeling solutions. Whether it’s a kitchen upgrade,
+                      bathroom renovation, room addition, or a complete home.
+                    </p>
+                  ),
+                  buttonLabel: (
+                    <span className="text-white cursor-pointer transform transition duration-300 hover:scale-105 hover:text-[var(--color-secondary)]">
+                      Explore more
+                    </span>
+                  ),
+                  buttonHref: "/services",
+                },
+                {
                   title: <h2 className="">Residential</h2>,
                   content: (
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
-                      dapibus leo.
+                      SGK Construction builds safe, durable, and stylish homes
+                      tailored to your lifestyle. From strong foundations to
+                      detailed finishes, we ensure every step is done with care
+                      so your family can enjoy a comfortable home that lasts for
+                      generations.
                     </p>
                   ),
                   buttonLabel: (
@@ -106,12 +140,11 @@ export default function Home() {
                   buttonHref: "/services",
                 },
                 {
-                  title: <h2 className="">Business</h2>,
+                  title: <h2 className="">Addition</h2>,
                   content: (
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
-                      dapibus leo.
+                      At SGK Construction, we help you create the extra space
+                      your family needs without leaving the home you love.
                     </p>
                   ),
                   buttonLabel: (
@@ -122,44 +155,14 @@ export default function Home() {
                   buttonHref: "/services",
                 },
                 {
-                  title: <h2 className="">Hospitality</h2>,
+                  title: <h2 className="">Commercial Construction</h2>,
                   content: (
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
-                      dapibus leo.
-                    </p>
-                  ),
-                  buttonLabel: (
-                    <span className="text-white cursor-pointer transform transition duration-300 hover:scale-105 hover:text-[var(--color-secondary)]">
-                      Explore more
-                    </span>
-                  ),
-                  buttonHref: "/services",
-                },
-                {
-                  title: <h2 className="">Industrial</h2>,
-                  content: (
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
-                      dapibus leo.
-                    </p>
-                  ),
-                  buttonLabel: (
-                    <span className="text-white cursor-pointer transform transition duration-300 hover:scale-105 hover:text-[var(--color-secondary)]">
-                      Explore more
-                    </span>
-                  ),
-                  buttonHref: "/services",
-                },
-                {
-                  title: <h2 className="">Educational</h2>,
-                  content: (
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
-                      dapibus leo.
+                      SGK Construction brings expertise and reliability to every
+                      commercial project. From office spaces and retail stores
+                      to restaurants and multi-use buildings, we deliver
+                      functional, high-quality spaces designed to support your
+                      business goals.
                     </p>
                   ),
                   buttonLabel: (

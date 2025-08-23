@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeUp } from "../types/animations";
+import { fadeUpImmediate } from "../types/animations";
 
 interface CustomImgProps {
   src: string;
@@ -12,7 +12,7 @@ export default function CustomImg({ src, alt, className }: CustomImgProps) {
     "object-cover w-full max-h-[600px] rounded-br-[100px] lg:rounded-br-[200px]";
   return (
     <motion.img
-      {...fadeUp}
+      {...fadeUpImmediate}
       className={className ? className : DefaultImgClass}
       src={src}
       alt={alt}

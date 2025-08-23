@@ -1,26 +1,91 @@
 import Header from "../components/Header";
+import { services } from "../data/services";
+
+import { fadeUpImmediate } from "../types/animations";
+import { motion } from "framer-motion";
+import { fadeUp } from "../types/animations";
 
 export default function Service() {
   return (
     <div>
       <Header />
 
-      <section className="bg-[var(--color-primary)] mb-20">
+      {/* Hero Section */}
+      <motion.section
+        {...fadeUpImmediate}
+        className="bg-[var(--color-primary)] mb-20"
+      >
         <div className="max-w-[1600px] mx-auto px-5 md:px-10">
-          <div className="md:grid md:grid-cols-2 md:grid-rows-2">
-            <h1 className="text-white text-4xl md:text-6xl lg:text-8xl font-semibold flex items-center">
+          <motion.div
+            {...fadeUpImmediate}
+            className="md:grid md:grid-cols-2 md:grid-rows-2"
+          >
+            <motion.h1
+              {...fadeUp}
+              className="text-white text-4xl md:text-6xl lg:text-8xl font-semibold flex items-center"
+            >
               Our Services
-            </h1>
-            <p className="text-white lg:text-xl pb-5 row-start-2 pt-10 md:pt-0 lg:pt-10">
-              Lorem ipsum dolor sit amet consectetur. Eros nulla sit
-              pellentesque mostie odio amet consectetur maecenas. Et cursus
-              sapien at nisl mattis est phasellus. Sit sagittis donec nullam
-              nunc volutpat suscipit pulvinar. Morbi ultrices gravida elementum
-              eget.
-            </p>
-          </div>
+            </motion.h1>
+            <motion.p
+              {...fadeUp}
+              className="text-white lg:text-xl pb-5 row-start-2 pt-10 md:pt-0 lg:pt-10"
+            >
+              From small repairs to full plumbing installations, SGK
+              Construction delivers reliable, high-quality solutions for your
+              home or business. Our licensed team handles leaks, pipe
+              replacements, fixture installations, and complete system upgrades
+              — always ensuring safety, efficiency, and lasting performance you
+              can trust.
+            </motion.p>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
+
+      {/* Services Grid */}
+      <motion.section {...fadeUpImmediate}>
+        <motion.div
+          {...fadeUpImmediate}
+          className="max-w-[1600px] mx-auto px-5 md:px-10"
+        >
+          {services.map((service, idx) => (
+            <motion.div
+              {...fadeUp}
+              key={service.id}
+              className="grid gap-24 mb-10 md:grid-cols-2 items-center"
+            >
+              {/* Text */}
+              <motion.div
+                {...fadeUp}
+                className={`flex flex-col justify-center ${
+                  idx % 2 !== 0 ? "md:order-2" : ""
+                }`}
+              >
+                <motion.h2
+                  {...fadeUp}
+                  className="text-2xl md:text-4xl font-semibold mb-4"
+                >
+                  {service.name}
+                </motion.h2>
+                <p>{service.comment}</p>
+              </motion.div>
+
+              {/* Image */}
+              <motion.div
+                {...fadeUp}
+                className={`flex ${
+                  idx % 2 !== 0 ? "justify-start" : "justify-end"
+                }`}
+              >
+                <img
+                  src={service.immage}
+                  alt={service.name}
+                  className="w-full max-w-[500px] rounded-md object-cover"
+                />
+              </motion.div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.section>
     </div>
   );
 }

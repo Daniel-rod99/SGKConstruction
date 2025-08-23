@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp } from "../types/animations";
+import { fadeUpImmediate } from "../types/animations";
 
 import ContactForm from "../components/ContactForm";
 import CustomImg from "../components/CustomImg";
@@ -15,7 +16,7 @@ export default function CompanyProfile() {
         <div className="py-10 lg:py-24 w-full max-w-[1600px] mx-auto px-5 md:px-10 text-white relative z-10">
           <div>
             <motion.h1
-              {...fadeUp}
+              {...fadeUpImmediate}
               className="text-4xl md:text-6xl lg:text-8xl font-bold pb-10"
             >
               About us
@@ -23,7 +24,7 @@ export default function CompanyProfile() {
           </div>
 
           <div className="md:grid md:grid-cols-2 md:gap-14 relative lg:pb-10">
-            <motion.div {...fadeUp} className="relative">
+            <motion.div {...fadeUpImmediate} className="relative">
               <CustomImg
                 className="object-cover rounded-br-[100px] lg:rounded-br-[200px] 
                      w-full h-full 
@@ -37,7 +38,7 @@ export default function CompanyProfile() {
               <div className="hidden lg:block lg:w-[500px]"></div>
             </motion.div>
 
-            <motion.div {...fadeUp} className="relative z-10">
+            <motion.div {...fadeUpImmediate} className="relative z-10">
               <h1 className="font-semibold lg:text-5xl text-2xl md:text-3xl pb-5 pt-5 md:pt-0 text-[var(--color-secondary)]">
                 We are your partner in building legacy
               </h1>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeUp } from "../types/animations";
+import { fadeUpImmediate } from "../types/animations";
 
 import ContactForm from "../components/ContactForm";
 import ContactWhatsApp from "../components/ContactWhatsApp";
@@ -15,13 +15,13 @@ export default function Contact() {
         <div className="max-w-[1600px] mx-auto px-5 md:px-10">
           <div className="md:grid md:grid-cols-2 md:grid-rows-2">
             <motion.h1
-              {...fadeUp}
+              {...fadeUpImmediate}
               className="text-white text-4xl md:text-6xl lg:text-8xl font-semibold flex items-center"
             >
               Contact us
             </motion.h1>
             <motion.p
-              {...fadeUp}
+              {...fadeUpImmediate}
               className="text-white lg:text-xl pb-5 row-start-2 pt-10 md:pt-0 lg:pt-10"
             >
               We are here to answer your questions, provide guidance, and help

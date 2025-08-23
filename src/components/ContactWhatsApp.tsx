@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeUp } from "../types/animations";
+import { fadeUpImmediate } from "../types/animations";
 
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
@@ -9,7 +9,7 @@ export default function ContactWhatsApp() {
       <div className="max-w-[1600px] mx-auto px-5 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <motion.a
-            {...fadeUp}
+            {...fadeUpImmediate}
             href="https://wa.me/1234567890"
             target="_blank"
             className="bg-white p-6 rounded shadow-2xl flex flex-col items-center text-center hover:scale-105 transition transform"
@@ -25,7 +25,7 @@ export default function ContactWhatsApp() {
           </motion.a>
 
           <motion.a
-            {...fadeUp}
+            {...fadeUpImmediate}
             href="https://wa.me/+1 747 288 1357"
             target="_blank"
             className="bg-white p-6 rounded shadow-2xl flex flex-col items-center text-center hover:scale-105 transition transform"
