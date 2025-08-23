@@ -70,7 +70,7 @@ export default function Service() {
               {...fadeUp}
               key={service.id}
               id={service.name.replace(/\s+/g, "-").toLowerCase()} // ID para scroll
-              className="grid gap-24 mb-10 md:grid-cols-2 items-center"
+              className="grid gap-5 mb-10 md:grid-cols-2 items-center"
             >
               {/* Text */}
               <motion.div
