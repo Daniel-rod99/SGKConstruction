@@ -10,7 +10,7 @@ export default function ContactWhatsApp() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <motion.a
             {...fadeUpImmediate}
-            href="https://wa.me/1234567890"
+            href="https://wa.me/18188222232"
             target="_blank"
             className="bg-white p-6 rounded shadow-2xl flex flex-col items-center text-center hover:scale-105 transition transform"
           >
@@ -26,7 +26,7 @@ export default function ContactWhatsApp() {
 
           <motion.a
             {...fadeUpImmediate}
-            href="https://wa.me/+1 747 288 1357"
+            href="https://wa.me/17472881357"
             target="_blank"
             className="bg-white p-6 rounded shadow-2xl flex flex-col items-center text-center hover:scale-105 transition transform"
           >
