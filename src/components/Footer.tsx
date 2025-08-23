@@ -82,7 +82,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/services#remodeling-service"
+                  href="/services#remodeling-services"
                   className="hover:underline"
                 >
                   Remodeling Services
