@@ -189,24 +189,27 @@ export default function Home() {
             />
           </motion.div>
           <motion.div {...fadeUp}>
-            <h1 className="font-semibold lg:text-5xl text-2xl md:text-3xl pb-5 pt-5 md:pt-0">
+            <motion.h1
+              {...fadeUp}
+              className="font-semibold lg:text-5xl text-2xl md:text-3xl pb-5 pt-5 md:pt-0"
+            >
               We are your partner in building legacy
-            </h1>
-            <p className="pb-5">
+            </motion.h1>
+            <motion.p {...fadeUp} className="pb-5">
               SGK Construction is a company proudly serving the Los Angeles area
               since 1988. With over 35 years of experience, we specialize in new
               construction, remodeling, plumbing, electrical, concrete, and
               general repairs. Our team is licensed, insured, and dedicated to
               delivering top-quality work with honesty, reliability, and
               precision.
-            </p>
-            <p className="pb-5">
+            </motion.p>
+            <motion.p {...fadeUp} className="pb-5">
               We believe in building more than just homes — we build trust.
               Whether you're renovating a single room or developing an entire
               property, SGK Construction brings the knowledge, craftsmanship,
               and care needed to make your project a success from start to
               finish.
-            </p>
+            </motion.p>
             <CustomButton to="/company-profile">Learn more</CustomButton>
           </motion.div>
         </div>
