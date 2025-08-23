@@ -1,13 +1,29 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import { services } from "../data/services";
 
-import { fadeUpImmediate } from "../types/animations";
+import { fadeUpImmediate, fadeUp } from "../types/animations";
 import { motion } from "framer-motion";
-import { fadeUp } from "../types/animations";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 
 export default function Service() {
+  const location = useLocation();
+
+  // Scroll automático al hash si existe
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
   return (
     <>
       <Header />
@@ -53,7 +69,7 @@ export default function Service() {
             <motion.div
               {...fadeUp}
               key={service.id}
-              id={service.name.replace(/\s+/g, "-").toLowerCase()}
+              id={service.name.replace(/\s+/g, "-").toLowerCase()} // ID para scroll
               className="grid gap-24 mb-10 md:grid-cols-2 items-center"
             >
               {/* Text */}

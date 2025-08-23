@@ -59,6 +59,11 @@ export default function Footer() {
                   Contact Us
                 </a>
               </li>
+              <li>
+                <a href="/projects" className="hover:underline">
+                  Projects
+                </a>
+              </li>
             </ul>
           </motion.div>
 
