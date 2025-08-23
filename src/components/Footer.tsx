@@ -66,28 +66,55 @@ export default function Footer() {
             <h3 className="font-semibold mb-4 uppercase">Service</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/projects/residential" className="hover:underline">
-                  Residential
+                <a href="/services#plumbing" className="hover:underline">
+                  Plumbing
                 </a>
               </li>
               <li>
-                <a href="/projects/commercial" className="hover:underline">
-                  Business
+                <a href="/services#concrete" className="hover:underline">
+                  Concrete
                 </a>
               </li>
               <li>
-                <a href="/projects/industrial" className="hover:underline">
-                  Industrial
+                <a
+                  href="/services#remodeling-service"
+                  className="hover:underline"
+                >
+                  Remodeling Services
                 </a>
               </li>
               <li>
-                <a href="/projects/renovation" className="hover:underline">
-                  Hospitality
+                <a
+                  href="/services#new-construction"
+                  className="hover:underline"
+                >
+                  New construction
                 </a>
               </li>
               <li>
-                <a href="/projects/renovation" className="hover:underline">
-                  Educational
+                <a href="/services#retrofit" className="hover:underline">
+                  Retrofit
+                </a>
+              </li>
+              <li>
+                <a href="/services#addition" className="hover:underline">
+                  Addition
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/services#comercial-construction"
+                  className="hover:underline"
+                >
+                  Comercial construction
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/services#residential-construction"
+                  className="hover:underline"
+                >
+                  Residential construction
                 </a>
               </li>
             </ul>

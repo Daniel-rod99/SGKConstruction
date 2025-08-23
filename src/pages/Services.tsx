@@ -53,6 +53,7 @@ export default function Service() {
             <motion.div
               {...fadeUp}
               key={service.id}
+              id={service.name.replace(/\s+/g, "-").toLowerCase()}
               className="grid gap-24 mb-10 md:grid-cols-2 items-center"
             >
               {/* Text */}
