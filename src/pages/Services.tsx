@@ -4,10 +4,12 @@ import { services } from "../data/services";
 import { fadeUpImmediate } from "../types/animations";
 import { motion } from "framer-motion";
 import { fadeUp } from "../types/animations";
+import ContactForm from "../components/ContactForm";
+import Footer from "../components/Footer";
 
 export default function Service() {
   return (
-    <div>
+    <>
       <Header />
 
       {/* Hero Section */}
@@ -86,6 +88,9 @@ export default function Service() {
           ))}
         </motion.div>
       </motion.section>
-    </div>
+
+      <ContactForm />
+      <Footer />
+    </>
   );
 }

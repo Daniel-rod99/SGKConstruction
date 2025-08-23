@@ -98,7 +98,8 @@ export default function ContactForm({ showImage = true }: ContactFormProps) {
           Let's talk about your project!
         </motion.h2>
 
-        <div
+        <motion.div
+          {...fadeUp}
           className={`grid  gap-10 ${
             showImage ? "md:grid-cols-2" : "md:grid-cols-1"
           }`}
@@ -110,11 +111,13 @@ export default function ContactForm({ showImage = true }: ContactFormProps) {
             />
           )}
 
-          <form
+          <motion.form
+            {...fadeUp}
             onSubmit={handleSubmit}
             className="bg-white p-6 rounded shadow-md flex flex-col gap-4"
           >
-            <input
+            <motion.input
+              {...fadeUp}
               type="text"
               name="fullName"
               placeholder="Full Name"
@@ -122,7 +125,8 @@ export default function ContactForm({ showImage = true }: ContactFormProps) {
               onChange={handleChange}
               className="p-3 border border-gray-300 rounded"
             />
-            <input
+            <motion.input
+              {...fadeUp}
               type="email"
               name="email"
               placeholder="Email Address"
@@ -130,7 +134,8 @@ export default function ContactForm({ showImage = true }: ContactFormProps) {
               onChange={handleChange}
               className="p-3 border border-gray-300 rounded"
             />
-            <input
+            <motion.input
+              {...fadeUp}
               type="text"
               name="subject"
               placeholder="Subject"
@@ -138,7 +143,8 @@ export default function ContactForm({ showImage = true }: ContactFormProps) {
               onChange={handleChange}
               className="p-3 border border-gray-300 rounded"
             />
-            <textarea
+            <motion.textarea
+              {...fadeUp}
               name="message"
               placeholder="Your Message"
               value={form.message}
@@ -153,7 +159,7 @@ export default function ContactForm({ showImage = true }: ContactFormProps) {
               </p>
             )}
 
-            <div className="mt-4">
+            <motion.div {...fadeUp} className="mt-4">
               <CustomButton
                 type="submit"
                 showArrow
@@ -162,9 +168,9 @@ export default function ContactForm({ showImage = true }: ContactFormProps) {
               >
                 {loading ? "Sending..." : "Get a Quote"}
               </CustomButton>
-            </div>
-          </form>
-        </div>
+            </motion.div>
+          </motion.form>
+        </motion.div>
       </motion.div>
     </section>
   );
