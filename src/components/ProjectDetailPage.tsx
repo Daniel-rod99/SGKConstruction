@@ -6,6 +6,10 @@ import Footer from "../components/Footer";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ContactForm from "./ContactForm";
 import TestimonialCarousel from "./TestimonialCarousel";
+import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
+
+import { fadeUp } from "../types/animations";
+import { motion } from "framer-motion";
 
 export default function ProjectDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -41,7 +45,6 @@ export default function ProjectDetailPage() {
         {/* PRINCIPAL INFO */}
         <h1 className="text-4xl lg:text-6xl font-bold mb-6">{project.title}</h1>
         <p className="text-lg text-gray-700 mb-4">{project.description}</p>
-        <p className="text-xl font-semibold mb-8">Price: {project.price}</p>
 
         {/* PRINCIPAL IMAGE */}
         <div className="mb-6 w-full h-[400px] md:h-[500px] lg:h-[700px] overflow-hidden rounded-lg shadow-lg">
@@ -71,12 +74,15 @@ export default function ProjectDetailPage() {
         </div>
 
         {/* FEATURES */}
-        <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
-        <ul className="list-disc pl-6 space-y-2">
-          {project.features.map((feature, idx) => (
-            <li key={idx}>{feature}</li>
-          ))}
-        </ul>
+        <h2 className="text-2xl font-semibold mb-4">Location</h2>
+        <div className="flex pb-4 gap-4 m-auto">
+          <motion.h3 {...fadeUp} className="gap-2 flex">
+            <motion.span {...fadeUp} className=" text-[var(--color-secondary)]">
+              <FmdGoodOutlinedIcon />
+            </motion.span>
+            {project.position}
+          </motion.h3>
+        </div>
       </div>
 
       <TestimonialCarousel />

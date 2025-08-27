@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import type { Project } from "../types/Project";
 import CustomImg from "./CustomImg";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
-import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 import CustomButton from "./CustomButton";
 
 interface Props {
@@ -35,12 +34,6 @@ export default function ProjectCard({ project }: Props) {
             <FmdGoodOutlinedIcon />
           </motion.span>
           {project.position}
-        </motion.h3>
-        <motion.h3 {...fadeUp} className="gap-2 flex">
-          <motion.span {...fadeUp} className=" text-[var(--color-secondary)]">
-            <CalendarMonthOutlinedIcon />
-          </motion.span>
-          {project.time}
         </motion.h3>
       </div>
       <motion.div {...fadeUp} className="pb-4">
