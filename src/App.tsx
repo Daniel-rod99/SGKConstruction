@@ -8,7 +8,6 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import ProjectDetailPage from "./components/ProjectDetailPage";
 import TermsAndConditions from "./components/TermsAndConditions";
-import ScrollToTop from "./components/ScrollToTop";
 
 import { pageTransition } from "./types/animations";
 
@@ -17,7 +16,6 @@ function App() {
 
   return (
     <>
-      <ScrollToTop />
       <AnimatePresence mode="wait">
         <motion.div key={location.pathname} {...pageTransition}>
           <Routes location={location}>

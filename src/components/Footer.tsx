@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp } from "../types/animations";
-
+import { HashLink } from "react-router-hash-link";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 
 export default function Footer() {
@@ -22,6 +22,7 @@ export default function Footer() {
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          {/* Company */}
           <div>
             <motion.h3
               {...fadeUp}
@@ -41,6 +42,7 @@ export default function Footer() {
             </motion.ul>
           </div>
 
+          {/* Quick Links */}
           <motion.div {...fadeUp}>
             <h3 className="font-semibold mb-4 uppercase">Quick links</h3>
             <ul className="space-y-2 text-sm">
@@ -59,72 +61,89 @@ export default function Footer() {
                   Contact Us
                 </a>
               </li>
-              <li>
-                <a href="/projects" className="hover:underline">
-                  Projects
-                </a>
-              </li>
             </ul>
           </motion.div>
 
+          {/* Services */}
           <motion.div {...fadeUp}>
             <h3 className="font-semibold mb-4 uppercase">Service</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/services#plumbing" className="hover:underline">
+                <HashLink
+                  smooth
+                  to="/services#plumbing"
+                  className="hover:underline"
+                >
                   Plumbing
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a href="/services#concrete" className="hover:underline">
+                <HashLink
+                  smooth
+                  to="/services#concrete"
+                  className="hover:underline"
+                >
                   Concrete
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a
-                  href="/services#remodeling-services"
+                <HashLink
+                  smooth
+                  to="/services#remodeling-services"
                   className="hover:underline"
                 >
                   Remodeling Services
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a
-                  href="/services#new-construction"
+                <HashLink
+                  smooth
+                  to="/services#new-construction"
                   className="hover:underline"
                 >
-                  New construction
-                </a>
+                  New Construction
+                </HashLink>
               </li>
               <li>
-                <a href="/services#retrofit" className="hover:underline">
+                <HashLink
+                  smooth
+                  to="/services#retrofit"
+                  className="hover:underline"
+                >
                   Retrofit
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a href="/services#addition" className="hover:underline">
+                <HashLink
+                  smooth
+                  to="/services#addition"
+                  className="hover:underline"
+                >
                   Addition
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a
-                  href="/services#comercial-construction"
+                <HashLink
+                  smooth
+                  to="/services#comercial-construction"
                   className="hover:underline"
                 >
-                  Comercial construction
-                </a>
+                  Comercial Construction
+                </HashLink>
               </li>
               <li>
-                <a
-                  href="/services#residential-construction"
+                <HashLink
+                  smooth
+                  to="/services#residential-construction"
                   className="hover:underline"
                 >
-                  Residential construction
-                </a>
+                  Residential Construction
+                </HashLink>
               </li>
             </ul>
           </motion.div>
 
+          {/* Useful Links */}
           <motion.div {...fadeUp}>
             <h3 className="font-semibold mb-4 uppercase">Useful Links</h3>
             <ul className="space-y-2 text-sm">
@@ -136,18 +155,20 @@ export default function Footer() {
             </ul>
           </motion.div>
 
+          {/* Contact */}
           <motion.div {...fadeUp}>
             <h3 className="font-semibold mb-4 uppercase">Contact</h3>
             <ul className="space-y-2 text-sm">
-              <a
-                href="https://www.google.com/maps?q=Sherman+Oaks,+Los+Angeles+CA+91403+United+States"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                Sherman Oaks, Los Angeles CA 91403 United States
-              </a>
-
+              <li>
+                <a
+                  href="https://www.google.com/maps?q=Sherman+Oaks,+Los+Angeles+CA+91403+United+States"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  Sherman Oaks, Los Angeles CA 91403 United States
+                </a>
+              </li>
               <li>
                 <a
                   href="mailto:sgkconstruction.la@gmail.com"
@@ -165,6 +186,7 @@ export default function Footer() {
           </motion.div>
         </div>
 
+        {/* Copyright */}
         <motion.div
           {...fadeUp}
           className="border-t border-gray-500 border-opacity-30 mt-12 pt-6 text-center text-sm text-[12px]"

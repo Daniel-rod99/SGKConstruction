@@ -1,5 +1,6 @@
 import DrawerMenu from "./DrawerMenu";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import CustomButton from "./CustomButton";
 
 interface HeaderProps {
@@ -7,8 +8,22 @@ interface HeaderProps {
 }
 
 export default function Header({ isHome = false }: HeaderProps) {
-  const navigate = useNavigate();
   const location = useLocation();
+
+  // Función para ajustar offset del scroll (header fijo)
+  const scrollWithOffset = (el: HTMLElement) => {
+    const yOffset = -130; // altura de tu header
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
+  const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "Company Profile", href: "/company-profile" },
+    { label: "Service", href: "/services" },
+    { label: "Projects", href: "/projects" },
+    { label: "Contact Us", href: "/contact" },
+  ];
 
   return (
     <div
@@ -23,7 +38,6 @@ export default function Header({ isHome = false }: HeaderProps) {
             className={`text-2xl md:text-4xl font-bold cursor-pointer ${
               isHome ? "text-[var(--color-primary)]" : "text-white"
             }`}
-            onClick={() => navigate("/")}
           >
             SGK{" "}
             <span
@@ -39,23 +53,18 @@ export default function Header({ isHome = false }: HeaderProps) {
         {/* NAVBAR */}
         <nav className="hidden lg:block">
           <ul className="flex gap-20 text-xl">
-            {[
-              { label: "Home", path: "/" },
-              { label: "Company Profile", path: "/company-profile" },
-              { label: "Service", path: "/services" },
-              { label: "Projects", path: "/projects" },
-              { label: "Contact Us", path: "/contact" },
-            ].map(({ label, path }) => (
+            {navLinks.map(({ label, href }) => (
               <li
-                key={path}
+                key={href}
                 className={`border-b-2 ${
-                  location.pathname === path
+                  location.pathname === href.split("#")[0]
                     ? "border-[var(--color-secondary)]"
                     : "border-transparent"
                 } hover:border-[var(--color-secondary)] transition duration-300 ease-in-out cursor-pointer`}
-                onClick={() => navigate(path)}
               >
-                {label}
+                <HashLink smooth scroll={scrollWithOffset} to={href}>
+                  {label}
+                </HashLink>
               </li>
             ))}
           </ul>
