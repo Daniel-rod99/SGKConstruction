@@ -37,7 +37,7 @@ export default function ContactWhatsApp() {
               </span>
             </p>
             <h2 className="text-lg font-medium">Karen Rodriguez</h2>
-            <h2 className="text-lg font-medium">Español</h2>
+            <h2 className="text-lg font-medium">English/Español</h2>
           </motion.a>
         </div>
       </div>
