@@ -10,10 +10,13 @@ interface HeaderProps {
 export default function Header({ isHome = false }: HeaderProps) {
   const location = useLocation();
 
+  // Función dinámica para scroll, toma la altura del header
   const scrollWithOffset = (el: HTMLElement) => {
-    const headerOffset = 130;
+    const header = document.querySelector(".header"); // ajusta si tu header tiene otra clase
+    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+
     const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
-    const offsetPosition = elementPosition - headerOffset;
+    const offsetPosition = elementPosition - headerHeight;
 
     window.scrollTo({
       top: offsetPosition,
@@ -31,29 +34,28 @@ export default function Header({ isHome = false }: HeaderProps) {
 
   return (
     <div
-      className={`flex w-full ${
+      className={`header flex w-full ${
         isHome ? "" : "bg-[var(--color-primary)] text-white"
       }`}
     >
       <div className="flex items-center justify-between w-full h-20 px-5 md:h-28">
         {/* LOGO */}
         <section>
-          <HashLink
-            smooth
-            scroll={scrollWithOffset}
-            to="/"
-            className={`text-2xl md:text-4xl font-bold cursor-pointer ${
-              isHome ? "text-[var(--color-primary)]" : "text-white"
-            }`}
-          >
-            SGK{" "}
-            <span
-              className={`font-bold ${
-                isHome ? "text-[var(--color-secondary)]" : "text-white"
+          <HashLink smooth scroll={scrollWithOffset} to="/">
+            <h1
+              className={`text-2xl md:text-4xl font-bold cursor-pointer ${
+                isHome ? "text-[var(--color-primary)]" : "text-white"
               }`}
             >
-              Construction
-            </span>
+              SGK{" "}
+              <span
+                className={`font-bold ${
+                  isHome ? "text-[var(--color-secondary)]" : "text-white"
+                }`}
+              >
+                Construction
+              </span>
+            </h1>
           </HashLink>
         </section>
 

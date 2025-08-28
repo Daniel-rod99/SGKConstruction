@@ -1,4 +1,3 @@
-// DrawerMenu.tsx
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -30,42 +29,6 @@ export default function DrawerMenu({ scrollWithOffset }: DrawerMenuProps) {
     { label: "Contact Us", path: "/contact" },
   ];
 
-  const DrawerList = (
-    <Box
-      sx={{
-        width: 250,
-        height: "100%",
-        backgroundColor: "var(--color-primary)",
-      }}
-      role="presentation"
-      onClick={toggleDrawer(false)}
-    >
-      <List sx={{ mt: 6, color: "white" }}>
-        {pages.map((item) => (
-          <ListItem key={item.label} disablePadding>
-            <ListItemButton
-              sx={{
-                "&:hover": {
-                  backgroundColor: "var(--color-secondary)",
-                },
-              }}
-              component={HashLink}
-              smooth
-              scroll={scrollWithOffset}
-              to={item.path}
-            >
-              <ListItemText
-                primary={
-                  <Typography fontSize={"1.5rem"}>{item.label}</Typography>
-                }
-              />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
-
   return (
     <div>
       <IconButton
@@ -77,7 +40,41 @@ export default function DrawerMenu({ scrollWithOffset }: DrawerMenuProps) {
         <MenuIcon fontSize="large" className="text-[var(--color-secondary)]" />
       </IconButton>
       <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-        {DrawerList}
+        <Box
+          sx={{
+            width: 250,
+            height: "100%",
+            backgroundColor: "var(--color-primary)",
+          }}
+          role="presentation"
+        >
+          <List sx={{ mt: 6, color: "white" }}>
+            {pages.map((item) => (
+              <ListItem key={item.label} disablePadding>
+                <ListItemButton
+                  component={HashLink}
+                  to={item.path}
+                  smooth
+                  scroll={(el) => {
+                    scrollWithOffset(el); // Ajusta el offset
+                    setTimeout(() => setOpen(false), 300); // Cierra el drawer
+                  }}
+                  sx={{
+                    "&:hover": {
+                      backgroundColor: "var(--color-secondary)",
+                    },
+                  }}
+                >
+                  <ListItemText
+                    primary={
+                      <Typography fontSize={"1.5rem"}>{item.label}</Typography>
+                    }
+                  />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
       </Drawer>
     </div>
   );

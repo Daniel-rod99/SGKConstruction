@@ -1,14 +1,32 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import { services } from "../data/services";
+
 import { fadeUpImmediate, fadeUp } from "../types/animations";
 import { motion } from "framer-motion";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
-import useGlobalScrollToHash from "../hooks/useGlobalScrollToHash";
 
 export default function Service() {
-  // Hook global que maneja el scroll automático y offset del header
-  useGlobalScrollToHash();
+  const location = useLocation();
+
+  // Scroll automático al hash si existe
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        const header = document.querySelector(".header");
+        const headerHeight = header ? header.getBoundingClientRect().height : 0;
+        const y =
+          element.getBoundingClientRect().top + window.scrollY - headerHeight;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    } else {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+  }, [location]);
 
   return (
     <>
@@ -55,10 +73,10 @@ export default function Service() {
             <motion.div
               {...fadeUp}
               key={service.id}
-              id={service.name.replace(/\s+/g, "-").toLowerCase()}
+              id={service.name.replace(/\s+/g, "-").toLowerCase()} // ID para scroll
               className="grid gap-5 mb-10 md:grid-cols-2 items-center"
             >
-              {/* Texto */}
+              {/* Text */}
               <motion.div
                 {...fadeUp}
                 className={`flex flex-col justify-center ${
@@ -74,7 +92,7 @@ export default function Service() {
                 <p>{service.comment}</p>
               </motion.div>
 
-              {/* Imagen */}
+              {/* Image */}
               <motion.div
                 {...fadeUp}
                 className={`flex ${
