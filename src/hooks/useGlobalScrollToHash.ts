@@ -15,7 +15,7 @@ export default function useGlobalScrollToHash() {
   // Actualiza el offset según el tamaño de ventana
   useEffect(() => {
     const updateOffset = () => {
-      if (window.innerWidth < 768) setHeaderOffset(80); // móvil
+      if (window.innerWidth < 768) setHeaderOffset(100); // movile
       else if (window.innerWidth < 1024) setHeaderOffset(100); // tablet
       else setHeaderOffset(112); // desktop
     };
