@@ -103,7 +103,7 @@ export default function Home() {
                       Explore more
                     </span>
                   ),
-                  buttonHref: "/services",
+                  buttonHref: "/services#new-construction",
                 },
                 {
                   title: <h2 className="">Remodeling Services</h2>,
@@ -119,7 +119,7 @@ export default function Home() {
                       Explore more
                     </span>
                   ),
-                  buttonHref: "/services",
+                  buttonHref: "/services#remodeling-services",
                 },
                 {
                   title: <h2 className="">Residential</h2>,
@@ -137,7 +137,7 @@ export default function Home() {
                       Explore more
                     </span>
                   ),
-                  buttonHref: "/services",
+                  buttonHref: "/services#residential-construction",
                 },
                 {
                   title: <h2 className="">Addition</h2>,
@@ -152,7 +152,7 @@ export default function Home() {
                       Explore more
                     </span>
                   ),
-                  buttonHref: "/services",
+                  buttonHref: "/services#addition",
                 },
                 {
                   title: <h2 className="">Commercial Construction</h2>,
@@ -170,7 +170,7 @@ export default function Home() {
                       Explore more
                     </span>
                   ),
-                  buttonHref: "/services",
+                  buttonHref: "/services#comercial-construction",
                 },
               ]}
             />
