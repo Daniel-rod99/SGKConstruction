@@ -1,26 +1,26 @@
+// DrawerMenu.tsx
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
-
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
 import { useState } from "react";
 import { Typography } from "@mui/material";
+import { HashLink } from "react-router-hash-link";
 
-import { useNavigate } from "react-router-dom";
+interface DrawerMenuProps {
+  scrollWithOffset: (el: HTMLElement) => void;
+}
 
-export default function DrawerMenu() {
+export default function DrawerMenu({ scrollWithOffset }: DrawerMenuProps) {
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
   };
-
-  const navigate = useNavigate();
 
   const pages = [
     { label: "Home", path: "/" },
@@ -44,12 +44,15 @@ export default function DrawerMenu() {
         {pages.map((item) => (
           <ListItem key={item.label} disablePadding>
             <ListItemButton
-              onClick={() => navigate(item.path)}
               sx={{
                 "&:hover": {
                   backgroundColor: "var(--color-secondary)",
                 },
               }}
+              component={HashLink}
+              smooth
+              scroll={scrollWithOffset}
+              to={item.path}
             >
               <ListItemText
                 primary={
