@@ -11,20 +11,22 @@ import Footer from "../components/Footer";
 export default function Service() {
   const location = useLocation();
 
-  // Scroll automático al hash si existe
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     if (location.hash) {
       const id = location.hash.replace("#", "");
       const element = document.getElementById(id);
       if (element) {
-        const header = document.querySelector(".header");
-        const headerHeight = header ? header.getBoundingClientRect().height : 0;
-        const y =
-          element.getBoundingClientRect().top + window.scrollY - headerHeight;
-        window.scrollTo({ top: y, behavior: "smooth" });
+        setTimeout(() => {
+          const yOffset = -130;
+          const y =
+            element.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+
+          history.replaceState(null, "", location.pathname);
+        }, 100);
       }
-    } else {
-      window.scrollTo({ top: 0, behavior: "auto" });
     }
   }, [location]);
 
@@ -73,7 +75,7 @@ export default function Service() {
             <motion.div
               {...fadeUp}
               key={service.id}
-              id={service.name.replace(/\s+/g, "-").toLowerCase()} // ID para scroll
+              id={service.name.replace(/\s+/g, "-").toLowerCase()} // ID para hash
               className="grid gap-5 mb-10 md:grid-cols-2 items-center"
             >
               {/* Text */}

@@ -5,6 +5,13 @@ export default function useGlobalScrollToHash() {
   const { hash, pathname } = useLocation();
   const [headerOffset, setHeaderOffset] = useState(112); // default desktop
 
+  // Evita que el navegador guarde la posición de scroll
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+
   // Actualiza el offset según el tamaño de ventana
   useEffect(() => {
     const updateOffset = () => {
@@ -20,20 +27,29 @@ export default function useGlobalScrollToHash() {
 
   // Scroll al hash o top
   useEffect(() => {
-    if (hash) {
-      const id = hash.replace("#", "");
-      const element = document.getElementById(id);
-      if (element) {
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - headerOffset;
+    const scrollToPosition = () => {
+      if (hash) {
+        const id = hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition =
+            elementPosition + window.scrollY - headerOffset;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+
+          // Limpia el hash para que recargar la página no cause scroll loco
+          window.history.replaceState(null, "", pathname);
+        }
+      } else {
+        window.scrollTo({ top: 0, behavior: "auto" });
       }
-    } else {
-      window.scrollTo({ top: 0, behavior: "auto" });
-    }
+    };
+
+    // Aseguramos que el DOM haya renderizado antes de scroll
+    requestAnimationFrame(scrollToPosition);
   }, [hash, pathname, headerOffset]);
 }
