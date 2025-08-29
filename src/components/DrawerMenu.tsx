@@ -8,13 +8,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
 import { useState } from "react";
 import { Typography } from "@mui/material";
-import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
-interface DrawerMenuProps {
-  scrollWithOffset: (el: HTMLElement) => void;
-}
-
-export default function DrawerMenu({ scrollWithOffset }: DrawerMenuProps) {
+export default function DrawerMenu() {
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -52,13 +48,9 @@ export default function DrawerMenu({ scrollWithOffset }: DrawerMenuProps) {
             {pages.map((item) => (
               <ListItem key={item.label} disablePadding>
                 <ListItemButton
-                  component={HashLink}
+                  component={Link}
                   to={item.path}
-                  smooth
-                  scroll={(el) => {
-                    scrollWithOffset(el); // Ajusta el offset
-                    setTimeout(() => setOpen(false), 300); // Cierra el drawer
-                  }}
+                  onClick={() => setOpen(false)} // cierra el drawer al hacer clic
                   sx={{
                     "&:hover": {
                       backgroundColor: "var(--color-secondary)",

@@ -8,14 +8,17 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import ProjectDetailPage from "./components/ProjectDetailPage";
 import TermsAndConditions from "./components/TermsAndConditions";
-import useGlobalScrollToHash from "./hooks/useGlobalScrollToHash";
 
 import { pageTransition } from "./types/animations";
 
-function App() {
-  const location = useLocation();
+import { useEffect } from "react";
 
-  useGlobalScrollToHash();
+function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>

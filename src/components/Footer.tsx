@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { fadeUp } from "../types/animations";
-import { HashLink } from "react-router-hash-link";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 
 export default function Footer() {
@@ -69,76 +68,56 @@ export default function Footer() {
             <h3 className="font-semibold mb-4 uppercase">Service</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <HashLink
-                  smooth
-                  to="/services#plumbing"
-                  className="hover:underline"
-                >
+                <a href="/services#plumbing" className="hover:underline">
                   Plumbing
-                </HashLink>
+                </a>
               </li>
               <li>
-                <HashLink
-                  smooth
-                  to="/services#concrete"
-                  className="hover:underline"
-                >
+                <a href="/services#concrete" className="hover:underline">
                   Concrete
-                </HashLink>
+                </a>
               </li>
               <li>
-                <HashLink
-                  smooth
-                  to="/services#remodeling-services"
+                <a
+                  href="/services#remodeling-services"
                   className="hover:underline"
                 >
                   Remodeling Services
-                </HashLink>
+                </a>
               </li>
               <li>
-                <HashLink
-                  smooth
-                  to="/services#new-construction"
+                <a
+                  href="/services#new-construction"
                   className="hover:underline"
                 >
                   New Construction
-                </HashLink>
+                </a>
               </li>
               <li>
-                <HashLink
-                  smooth
-                  to="/services#retrofit"
-                  className="hover:underline"
-                >
+                <a href="/services#retrofit" className="hover:underline">
                   Retrofit
-                </HashLink>
+                </a>
               </li>
               <li>
-                <HashLink
-                  smooth
-                  to="/services#addition"
-                  className="hover:underline"
-                >
+                <a href="/services#addition" className="hover:underline">
                   Addition
-                </HashLink>
+                </a>
               </li>
               <li>
-                <HashLink
-                  smooth
-                  to="/services#comercial-construction"
+                <a
+                  href="/services#comercial-construction"
                   className="hover:underline"
                 >
                   Comercial Construction
-                </HashLink>
+                </a>
               </li>
               <li>
-                <HashLink
-                  smooth
-                  to="/services#residential-construction"
+                <a
+                  href="/services#residential-construction"
                   className="hover:underline"
                 >
                   Residential Construction
-                </HashLink>
+                </a>
               </li>
             </ul>
           </motion.div>
