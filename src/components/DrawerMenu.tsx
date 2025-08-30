@@ -50,7 +50,7 @@ export default function DrawerMenu() {
                 <ListItemButton
                   component={Link}
                   to={item.path}
-                  onClick={() => setOpen(false)} // cierra el drawer al hacer clic
+                  onClick={() => setOpen(false)}
                   sx={{
                     "&:hover": {
                       backgroundColor: "var(--color-secondary)",
