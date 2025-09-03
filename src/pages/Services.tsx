@@ -104,7 +104,7 @@ export default function Service() {
                 <img
                   src={service.immage}
                   alt={service.name}
-                  className="w-full max-w-[500px] rounded-md object-cover"
+                  className="w-ful max-w-[500px] rounded-md object-cover"
                 />
               </motion.div>
             </motion.div>

@@ -13,7 +13,7 @@ export const services: Service[] = [
     name: "Electrical Service",
     comment:
       "At SGK Construction, we provide safe, efficient, and code-compliant electrical solutions for homes and businesses. From wiring and panel upgrades to lighting installations and troubleshooting, our skilled electricians ensure every project is handled with precision, reliability, and your safety as the top priority.",
-    immage: "./servicesImmages/6.webp",
+    immage: "./servicesImmages/13.webp",
   },
   {
     id: 3,
